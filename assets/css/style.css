@@ -76,3 +76,11 @@ h1 {
 #how-to-play-btn {
     background: linear-gradient(90deg, rgb(209, 88, 110) 0%, rgb(206, 56, 83) 100%);
 }
+
+/* Home page image */
+.main-image {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 5rem;
+    justify-content: center;
+}
