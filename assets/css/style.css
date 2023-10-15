@@ -103,12 +103,13 @@
 
 .button {
     display: flex;
-    margin-bottom: 4rem;
-    width: 100%;
+    margin-bottom: 2rem;
+    width: 100vw;
     border-radius: 5px;
     background: rgb(206, 56, 83);
-    font-size: 4rem;
-    min-width: 80rem;
+    font-size: 2.5rem;
+    flex-direction: column;
+    text-align: center;
 }
 
 .button:hover {
@@ -116,4 +117,14 @@
     box-shadow: 0 0.6rem 1.2rem 0;
     transform: scale(1.01);
     transform: transform 100ms;
+}
+
+/* Correct/Incorrect answers */
+
+.correct {
+    background: linear-gradient(45deg, rgb(158, 230, 158), 0%, rgb(65, 211, 65), 100%)
+}
+
+.incorrect {
+    background: linear-gradient(45deg, rgb(228, 117, 117), 0%, rgb(255, 0, 0), 100%)
 }
