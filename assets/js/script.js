@@ -6,4 +6,6 @@ function openPopUp();
 function nextQuestion();
 function updateQNA();
 function shuffleArray();
-function retrieveContent();
+function retrieveContent() {
+    fetch('https://the-trivia-api.com/v2/questions');
+};
