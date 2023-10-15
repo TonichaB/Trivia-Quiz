@@ -1,9 +1,12 @@
+/* Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Mooli&family=Pontano+Sans:wght@300&display=swap');
 
+/*HTML selector*/
 :root {
     background-color: black;
 }
 
+/* Wildcard selector */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -12,6 +15,7 @@
     font-family: 'Mooli', sans-serif;
 }
 
+/* Start Page */
 h1 {
     font-size: 5.4rem;
     color: white;
@@ -51,12 +55,24 @@ h1 {
     display: none;
 }
 
+/* Start page buttons */
 .btn {
     font-size: 2.4rem;
     padding: 2rem 0;
     width: 30rem;
     text-align: center;
-    margin-bottom: 1rem;
+    margin-bottom: 3rem;
     text-decoration: none;
-    color: bisque;
+    color: rgb(0, 0, 0);
+    border-radius: 6px;
+    background: linear-gradient(90deg, rgb(214, 204, 194) 0%, rgb(255, 228, 196) 100%);
+}
+
+.btn:hover {
+    cursor: pointer;
+}
+
+/*How to play button*/
+#how-to-play-btn {
+    background: linear-gradient(90deg, rgb(209, 88, 110) 0%, rgb(206, 56, 83) 100%);
 }
