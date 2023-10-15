@@ -16,11 +16,6 @@
 }
 
 /* Start Page */
-h1 {
-    font-size: 5.4rem;
-    color: white;
-    margin-bottom: 5rem;
-}
 
 .container {
     width: 100vw;
@@ -55,7 +50,7 @@ h1 {
     display: none;
 }
 
-/* Start page buttons */
+/* Lets Play and How to Play links */
 .btn {
     font-size: 2.4rem;
     padding: 2rem 0;
@@ -77,10 +72,37 @@ h1 {
     background: linear-gradient(90deg, rgb(209, 88, 110) 0%, rgb(206, 56, 83) 100%);
 }
 
-/* Home page image */
+/* Main image */
 .main-image {
     max-width: 100%;
     height: auto;
     margin-bottom: 5rem;
     justify-content: center;
+}
+
+/*Game page*/
+
+/*Question div*/
+#question {
+    color: white;
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+/*Answer Buttons*/
+
+.button {
+    display: flex;
+    margin-bottom: 4rem;
+    width: 100%;
+    border-radius: 5px;
+    background: rgb(206, 56, 83);
+    font-size: 4rem;
+    min-width: 80rem;
+}
+
+.button:hover {
+    cursor: pointer;
+    box-shadow: 0 0.6rem 1.2rem 0;
 }
