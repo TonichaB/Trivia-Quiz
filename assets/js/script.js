@@ -1,3 +1,13 @@
+/* Target elements from DOM */
+
+const playGame = document.getElementById("play-btn");
+const instructionsButton = document.getElementById("how-to-play-btn");
+const question = document.getElementById("question");
+
+let score = 0;
+
+
+/* Functions */
 function runGame();
 function checkAnswer();
 function incrementScore();
