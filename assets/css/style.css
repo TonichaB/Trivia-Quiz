@@ -104,12 +104,12 @@
 .button {
     display: flex;
     margin-bottom: 2rem;
-    width: 100vw;
+    width: 100%;
     border-radius: 5px;
     background: rgb(206, 56, 83);
     font-size: 2.5rem;
-    flex-direction: column;
-    text-align: center;
+    justify-content: center;
+    align-items: center;
 }
 
 .button:hover {
