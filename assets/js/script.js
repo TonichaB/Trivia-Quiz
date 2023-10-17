@@ -53,6 +53,25 @@ function closeInstructions() {
     mainPage.classList.remove("hidden");
     mainImage.classList.remove("hidden");
 }
+
+/* This function will open the leaderboard pop up whilst hiding the main menu.
+* The function also listens out for the close button
+*/
+function leaderboardPopUp() {
+    leaderboardButton.classList.remove("hidden");
+    mainPage.classList.add("hidden");
+    mainImage.classList.add("hidden");
+    const closeLeaderboardPopUp = document.getElementById("close-leaderboard");
+    closeLeaderboardPopUp.addEventListener("click", closeLeaderboard);
+}
+
+/* This function will close the leaderboard pop up when the close button is clicked */
+function closeLeaderboard() {
+    leaderboardButton.classList.add("hidden)");
+    mainPage.classList.remove("hidden");
+    mainImage.classList.remove("hidden");
+}
+
 function runGame();
 function checkAnswer();
 function incrementScore();
