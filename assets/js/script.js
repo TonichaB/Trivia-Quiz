@@ -3,6 +3,9 @@
 const playGame = document.getElementById("play-btn");
 const instructionsButton = document.getElementById("how-to-play-btn");
 const leaderboardButton = document.getElementById("leaderboard-btn");
+const mainPage = document.getElementsByClassName("container");
+const quizPage = document.getElementsByClassName("container2");
+const mainImage = document.getElementsByClassName("main-image");
 const question = document.getElementById("question");
 const buttonA = document.getElementById("answer_a_btn");
 const buttonB = document.getElementById("answer_b_btn");
@@ -33,12 +36,28 @@ document.addEventListener("DOMContentLoaded", function () {
     };
 });
 
+/* This function will open the how to play pop up whilst hiding the main menu.
+* The function also listens out for the close button
+*/
+function instructionsPopUp() {
+    instructionsButton.classList.remove("hidden");
+    mainPage.classList.add("hidden");
+    mainImage.classList.add("hidden");
+    const closeInstructionsPopUp = document.getElementById("close-instructions");
+    closeInstructionsPopUp.addEventListener("click", closeInstructions);
+}
 
+/* This function will close the how to play pop up when the close button is clicked */
+function closeInstructions() {
+    instructionsButton.classList.add("hidden)");
+    mainPage.classList.remove("hidden");
+    mainImage.classList.remove("hidden");
+}
 function runGame();
 function checkAnswer();
 function incrementScore();
 function displayQuestion();
-function instructionsPopUp();
+
 function leaderboardPopUp();
 function closePopUp();
 function nextQuestion();
