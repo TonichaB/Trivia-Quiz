@@ -22,7 +22,7 @@ let shuffleQuestion;
 */
 
 document.addEventListener("DOMContentLoaded", function () {
-    const startButtons = document.this.querySelectorAll(".btn");
+    const startButtons = document.this.querySelectorAll("btn");
     startButtons.forEach((startButtons) => {
         startButtons.addEventListener("click", function () {
             if (this.getAtribute("id") === ".play-btn") {
