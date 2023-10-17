@@ -22,6 +22,7 @@
       name="keywords"
       content="trivia, quiz, game, general-knowledge, gamenight"
     />
+    <!-- Google Fonts-->
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Mooli&family=Pontano+Sans:wght@300&display=swap");
     </style>
@@ -29,14 +30,17 @@
   <body>
     <header></header>
     <main>
+        <!-- Home page -->
       <section id="start-page">
         <div class="container">
           <div id="home" class="flex-column flex center">
+            <!-- Main Image -->
             <img
               src="assets/images/quiz-night-home.webp"
               alt="Quiz night logo image"
               class="main-image"
             />
+            <!-- Play, Instructions and Leaderboard Buttons -->
             <button href="x" class="btn" id="play-btn">
               Let's Play! <i class="fa-regular fa-circle-play"></i>
             </button>
@@ -48,7 +52,20 @@
             </button>
           </div>
         </div>
+        <!-- Instructions Pop Up -->
+        <div id="instructions-pop-up">
+            <h2 id="instructions-h2">How to Play?</h2>
+            <p>
+                <ol>
+                    <li>Click Let's Play! to start the quiz!</li>
+                    <li>The quiz is multiple choice, and contains 20 random questions.</li>
+                    <li>To answer, simply click on the button the answer you think is correct.</li>
+                    <li>Submit your score at the end to see how you compare on our leaderboard!</li>
+                </ol>
+            </p>
+        </div>
       </section>
+      <!-- Main Quiz Section -->
       <section id="game-page">
         <div class="container hidden container2">
           <div id="game" class="justify-center flex-column">
@@ -95,6 +112,7 @@
       </section>
     </main>
     <footer></footer>
+    <!-- Javascript -->
     <script src="assets/js/script.js"></script>
   </body>
 </html>
