@@ -1,8 +1,8 @@
 /* Target elements from DOM */
 
 const playGame = document.getElementById("play-btn");
-const instructionsButton = document.getElementById("how-to-play-btn");
-const leaderboardButton = document.getElementById("leaderboard-btn");
+const instructionsButton = document.getElementById("instructions-pop-up");
+const leaderboardButton = document.getElementById("leaderboard-pop-up");
 const mainPage = document.getElementsByClassName("container");
 const quizPage = document.getElementsByClassName("container2");
 const mainImage = document.getElementsByClassName("main-image");
@@ -22,8 +22,8 @@ let shuffleQuestion;
 */
 
 document.addEventListener("DOMContentLoaded", function () {
-    const startButtons = document.getElementsByClassName("btn");
-    startButtons.forEach(startButton) => {
+    const startButtons = document.this.querySelectorAll(".btn");
+    startButtons.forEach((startButtons) => {
         startButtons.addEventListener("click", function () {
             if (this.getAtribute("id") === ".play-btn") {
                 runGame();
@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 leaderboardPopUp();
             }
         });
-    };
+    });
 });
 
 /* This function will open the how to play pop up whilst hiding the main menu.

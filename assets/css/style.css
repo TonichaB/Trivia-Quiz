@@ -77,6 +77,39 @@
     justify-content: center;
 }
 
+/* Instructions Pop Up */
+
+#instructions-pop-up {
+    position: relative;
+    opacity: 1;
+    background-color: rgb(206, 56, 83);
+    border: 1px;
+    border-radius: 4px;
+    padding: 15px;
+    display: none;
+    flex-direction: column;
+    font-size: 2.5rem;
+}
+
+#instructions-pop-up h2 {
+    margin-top: 4rem;
+}
+
+/* Close Instructions */
+#close-instructions {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    padding: 0 10px;
+    background: transparent;
+    border: none;
+    font-size: 2.5rem;
+}
+
+#close-instructions:hover {
+    cursor: pointer;
+}
+
 /*Game page*/
 
 /* Username & Score */
