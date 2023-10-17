@@ -2,6 +2,7 @@
 
 const playGame = document.getElementById("play-btn");
 const instructionsButton = document.getElementById("how-to-play-btn");
+const leaderboardButton = document.getElementById("leaderboard-btn");
 const question = document.getElementById("question");
 const buttonA = document.getElementById("answer_a_btn");
 const buttonB = document.getElementById("answer_b_btn");
@@ -25,17 +26,20 @@ document.addEventListener("DOMContentLoaded", function () {
                 runGame();
             } else if (this.getAtribute("id") === "how-to-play-btn") {
                 instructionsPopUp();
+            } else if (this.getAtribute("id") === "leaderboard-btn") {
+                leaderboardPopUp();
             }
         });
     };
 });
 
-/* Functions */
+
 function runGame();
 function checkAnswer();
 function incrementScore();
 function displayQuestion();
 function instructionsPopUp();
+function leaderboardPopUp();
 function closePopUp();
 function nextQuestion();
 function updateQNA();
