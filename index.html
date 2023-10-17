@@ -14,21 +14,67 @@
   <body>
     <header></header>
     <main>
-      <div class="container">
-        <div id="home" class="flex-column flex center">
-          <img
-            src="assets/images/quiz-night-home.webp"
-            alt="Quiz night logo image"
-            class="main-image"
-          />
-          <a href="/game.html" class="btn"
-            id="play-btn">Let's Play! <i class="fa-regular fa-circle-play"></i
-          ></a>
-          <a href="x" class="btn" id="how-to-play-btn"
-            >How to Play? <i class="fa-regular fa-circle-question"></i
-          ></a>
+      <section id="start-page">
+        <div class="container">
+          <div id="home" class="flex-column flex center">
+            <img
+              src="assets/images/quiz-night-home.webp"
+              alt="Quiz night logo image"
+              class="main-image"
+            />
+            <button href="x" class="btn" id="play-btn">
+              Let's Play! <i class="fa-regular fa-circle-play"></i>
+            </button>
+            <button href="x" class="btn" id="how-to-play-btn">
+              How to Play? <i class="fa-regular fa-circle-question"></i>
+            </button>
+          </div>
         </div>
-      </div>
+      </section>
+      <section id="game-page">
+        <div class="container2">
+          <div id="game" class="justify-center flex-column">
+            <div class="username-and-score">
+              <p>User Score will show here</p>
+            </div>
+            <div>
+              <div class="questions-box">
+                <p id="question">Question will show here</p>
+              </div>
+              <div class="answer-buttons">
+                <button
+                  class="button"
+                  id="answer-a-btn"
+                  aria-label="Answer Button A"
+                >
+                  A
+                </button>
+                <button
+                  class="button"
+                  id="answer-b-btn"
+                  aria-label="Answer Button B"
+                >
+                  B
+                </button>
+                <button
+                  class="button"
+                  id="answer-c-btn"
+                  aria-label="Answer Button C"
+                >
+                  C
+                </button>
+                <button
+                  class="button"
+                  id="answer-d-btn"
+                  aria-label="Answer Button D"
+                >
+                  D
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <footer></footer>
     <script src="assets/js/script.js"></script>
