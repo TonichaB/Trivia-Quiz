@@ -16,6 +16,7 @@ let score = 0;
 let wrongAnswer;
 let correctAnswer;
 let shuffleQuestion;
+let qnaObjectArray;
 
 /* Wait for DOM to load before executing the first function 
 * to show the start page and add event listeners for the buttons
@@ -63,6 +64,7 @@ function leaderboardPopUp() {
     mainImage.classList.add("hidden");
     const closeLeaderboardPopUp = document.getElementById("close-leaderboard");
     closeLeaderboardPopUp.addEventListener("click", closeLeaderboard);
+    displayScores();
 }
 
 /* This function will close the leaderboard pop up when the close button is clicked */
@@ -72,16 +74,37 @@ function closeLeaderboard() {
     mainImage.classList.remove("hidden");
 }
 
-function runGame();
-function checkAnswer();
-function incrementScore();
-function displayQuestion();
+/* This function will take the user to the quiz to start */
+function runGame() {
+    mainPage.classList.add("hidden");
+    mainImage.classList.add("hidden");
+    quizPage.classList.remove("hidden")
+    retrieveContent();
+    displayQuestion();
+    displayScore();
+}
 
-function leaderboardPopUp();
-function closePopUp();
-function nextQuestion();
-function updateQNA();
-function shuffleArray();
+/* This function should extract the quiz data sourced from https://the-trivia-api.com/ 
+* Then calling the function to load the content or catch any errors
+*/
 function retrieveContent() {
     fetch('https://the-trivia-api.com/v2/questions');
+    .then(response => response.json()) //Parsing the data to JSON
+    .then(data => {
+        qnaObjectArray = data;
+        nextQuestion();
+    })
+    /catch(error => {
+        question.textContent = `Error- Unable to load question : ${error}`
+    })
 }
+
+function displayQuestion();
+function displayScore();
+function nextQuestion();
+
+function checkAnswer();
+function incrementScore();
+
+function updateQNA();
+function shuffleArray();
