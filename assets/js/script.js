@@ -23,14 +23,14 @@ let qnaObjectArray;
 */
 
 document.addEventListener("DOMContentLoaded", function () {
-    const startButtons = document.this.querySelectorAll("btn");
+    const startButtons = document.this.querySelectorAll(".btn");
     startButtons.forEach((startButtons) => {
         startButtons.addEventListener("click", function () {
             if (this.getAtribute("id") === ".play-btn") {
                 runGame();
-            } else if (this.getAtribute("id") === "how-to-play-btn") {
+            } else if (this.getAtribute("id") === ".how-to-play-btn") {
                 instructionsPopUp();
-            } else if (this.getAtribute("id") === "leaderboard-btn") {
+            } else if (this.getAtribute("id") === ".leaderboard-btn") {
                 leaderboardPopUp();
             }
         });
@@ -78,9 +78,9 @@ function closeLeaderboard() {
 function runGame() {
     mainPage.classList.add("hidden");
     mainImage.classList.add("hidden");
-    quizPage.classList.remove("hidden")
+    quizPage.classList.remove("hidden");
     retrieveContent();
-    displayQuestion();
+    nextQuestion();
     displayScore();
 }
 
@@ -89,17 +89,16 @@ function runGame() {
 */
 function retrieveContent() {
     fetch('https://the-trivia-api.com/v2/questions');
-    .then(response => response.json()) //Parsing the data to JSON
-    .then(data => {
+    then(response => response.json()); //Parsing the data to JSON
+    then(data => {
         qnaObjectArray = data;
         nextQuestion();
-    })
-    /catch(error => {
-        question.textContent = `Error- Unable to load question : ${error}`
-    })
+    });
+    catch(error => {
+        question.textContent = `Error- Unable to load question : ${error}`;
+    });
 }
 
-function displayQuestion();
 function displayScore();
 function nextQuestion();
 
