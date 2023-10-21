@@ -20,6 +20,10 @@ Quiz Night is an online trivia quiz for users wanting to test their general know
   - [Deployment and Local Development](#deployment-and-local-development)
   - [Testing](#testing)
   - [Credits](#credits)
+    - [Code Used](#code-used)
+    - [Content](#content)
+    - [Media](#media)
+    - [Acknowledgements](#acknowledgements)
 
 ---
 
@@ -52,3 +56,20 @@ Quiz Night is an online trivia quiz for users wanting to test their general know
 ---
 
 ## Credits
+
+### Code Used
+
+To assist with the building of this quiz I have made use of the following;
+- As a general guide to build the quiz I have referred to the following YouTube tutorials:
+  - [Brian Design](https://www.youtube.com/watch?v=f4fB9Xg2JEY)
+  - [Codehal](https://www.youtube.com/watch?v=Vp8x8-reqZA)
+
+### Content
+The icons used on the home page of the quiz have been sourced from [Font Awesome](https://fontawesome.com/)
+
+### Media
+
+### Acknowledgements
+I would like to acknowledge Code Institute and their Full Stack Development course which has assisted me in building the site.
+
+I would also like to thank my fellow students and members of the Stack community whose contributions within the Slack channels have proven to be very helpful when facing challenges during the project. 
