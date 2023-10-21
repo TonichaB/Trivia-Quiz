@@ -19,6 +19,8 @@ Quiz Night is an online trivia quiz for users wanting to test their general know
   - [Technologies Used](#technologies-used)
   - [Deployment and Local Development](#deployment-and-local-development)
   - [Testing](#testing)
+    - [Validators](#validators)
+    - [Bug Fixes](#bug-fixes)
   - [Credits](#credits)
     - [Code Used](#code-used)
     - [Content](#content)
@@ -52,6 +54,14 @@ Quiz Night is an online trivia quiz for users wanting to test their general know
 ---
 
 ## Testing
+
+### Validators
+
+### Bug Fixes
+
+During the process of building the quiz I came accross a couple of bugs to be fixed.
+
+The first bug I came across related to the functionality of the start page buttons.
 
 ---
 

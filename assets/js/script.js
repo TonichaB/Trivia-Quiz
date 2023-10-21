@@ -39,11 +39,14 @@ document.addEventListener("DOMContentLoaded", function () {
     const startButtons = document.this.querySelectorAll(".btn");
     startButtons.forEach((startButtons) => {
         startButtons.addEventListener("click", function () {
-            if (this.getAtribute("id") === ".play-btn") {
+            if (this.getAtribute("id") === "play-btn") {
+                console.log("Play Game");
                 runGame();
-            } else if (this.getAtribute("id") === ".how-to-play-btn") {
+            } else if (this.getAtribute("id") === "how-to-play-btn") {
+                console.log("instructions");
                 instructionsPopUp();
-            } else if (this.getAtribute("id") === ".leaderboard-btn") {
+            } else if (this.getAtribute("id") === "leaderboard-btn") {
+                console.log("leaderboard");
                 leaderboardPopUp();
             }
         });
