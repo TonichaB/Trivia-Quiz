@@ -15,7 +15,7 @@ const highScore = document.getElementsByClassName("high-scores");
 const savedScores = JSON.parse(localStorage.getItem("savedScores")) || [];
 
 let score = 0;
-let wrongAnswer;
+let wrongAnswers;
 let correctAnswer;
 let shuffleQuestion = [];
 let qnaObjectArray;
@@ -111,18 +111,18 @@ function retrieveContent() {
 /* This function should pull through the question + answer data from the API
 * The function will also be called to go to the next question in the object array
 */
-function nextQuestion(
+function nextQuestion() {
     // Extract question from API
-    let qnaObject = qnaObjectArray[questionCounter];
-    let questionText = qnaObject.question.text;
+    const qnaObject = qnaObjectArray[questionCounter];
+    const questionText = qnaObject.question.text;
 
     // Extract the wrong and correct answers from the response data
     wrongAnswers = qnaObject.incorrectAnswers;
     correctAnswer = qnaObject.correctAnswer;
 
     updateQNA(questionText, wrongAnswers, correctAnswer);
-questionCounter++;
-);
+    questionCounter++;
+};
 
 
 function displayScore();
