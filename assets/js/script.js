@@ -129,7 +129,7 @@ function nextQuestion() {
 * or for last question the end screen will show
 */
 function checkAnswer(buttonText) {
-    if (!pupUpActive) {
+    if (!popUpActive) {
         buttonText = buttonText.substring(buttonText.indexOf("") + 1);
 
         if (buttonText === correctAnswer) {
@@ -147,7 +147,43 @@ function checkAnswer(buttonText) {
     }
 };
 
-function showNotification();
+function showNotification(message, type) {
+    const notification = document.getElementById("notification");
+    notification.style.display = "flex";
+    notification.animate(
+        [
+            { top: "-210px" },
+            { top: "-25px" }
+        ],
+        {
+            duration: 1000,
+            fill: "forwards"
+        }
+    );
+
+    notification.innerHTML = `<p>${message}</p>`;
+
+    if (type === "success") {
+        notification.style.backgroundColour = "green";
+        notification.style.color = "white";
+    } else if (type === "error") {
+        notification.style.backgroundColour = "red";
+        notification.style.color = "white";
+    }
+
+    setTimeout(() => {
+        notification.animate(
+            [
+                { top: "-25px" },
+                { top: "-250px" }
+            ],
+            {
+                duration: 1000,
+                fill: "forwards"
+            }
+        );
+    }, 4000);
+}
 
 function incrementScore() {
     score = parseInt(document.getElementsByClassName("score").innerText);
