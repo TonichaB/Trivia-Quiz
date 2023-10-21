@@ -11,11 +11,13 @@ const buttonA = document.getElementById("answer_a_btn");
 const buttonB = document.getElementById("answer_b_btn");
 const buttonC = document.getElementById("answer_c_btn");
 const buttonD = document.getElementById("answer_d_btn");
+const highScore= document.getElementsByClassName("high-scores")
+const savedScores= JSON.parse(localStorage.getItem("savedScores")) || [];
 
 let score = 0;
 let wrongAnswer;
 let correctAnswer;
-let shuffleQuestion;
+let shuffleQuestion = [];
 let qnaObjectArray;
 let questionCounter;
 
@@ -69,7 +71,13 @@ function leaderboardPopUp() {
     displayLeaderboard();
 }
 
-function displayLeaderboard();
+function displayLeaderboard(){
+    highScore.innerHTML = savedScores
+    .map((score) => {
+        return `<li class= "high-scores">${score.name} - ${score.score}`;
+    })
+    .join();
+}
 
 /* This function will close the leaderboard pop up when the close button is clicked */
 function closeLeaderboard() {
