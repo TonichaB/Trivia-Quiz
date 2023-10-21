@@ -69,6 +69,8 @@ function leaderboardPopUp() {
     displayLeaderboard();
 }
 
+function displayLeaderboard();
+
 /* This function will close the leaderboard pop up when the close button is clicked */
 function closeLeaderboard() {
     leaderboardButton.classList.add("hidden)");
@@ -117,8 +119,32 @@ questionCounter++;
 
 function displayScore();
 
-function checkAnswer();
+/* Function to check the answer when answer button is selected to see if it's correct
+* once checked the next question will be triggered, 
+* or for last question the end screen will show
+*/
+function checkAnswer(buttonText) {
+    if (!pupUpActive) {
+        buttonText = buttonText.substring(buttonText.indexOf("") + 1);
+
+        if (buttonText === correctAnswer) {
+            showNotification("That's Right!", "success");
+            if (questionCounter <= 20) {
+                nextQuestion();
+            } else {
+                questionCounter = 0;
+                retrieveContent();
+            }
+            incrementScore();
+        } else {
+            endGame();
+        }
+    }
+}
+
 function incrementScore();
+function endGame();
+function showNotification();
 
 function updateQNA(questionText, wrongAnswers, correctAnswer) {
     const answersArray = [wrongAnswers[0], wrongAnswers[1], wrongAnswers[2], correctAnswer];
@@ -140,4 +166,3 @@ function shuffleArray(array) {
     }
     return array;
 }
-function displayLeaderboard();
