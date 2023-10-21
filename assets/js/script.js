@@ -159,7 +159,7 @@ function endGame() {
     mainPage.classList.add("hidden");
     mainImage.classList.add("hidden");
     quizPage.classList.add("hidden");
-    endGame.classList.remove("hidden");
+    quizComplete.classList.remove("hidden");
     finalScore.innerText = score;
 
     const endGameButtons = document.querySelectorAll(".quiz-complete-btn");
