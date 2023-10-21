@@ -17,6 +17,7 @@ let wrongAnswer;
 let correctAnswer;
 let shuffleQuestion;
 let qnaObjectArray;
+let questionCounter;
 
 /* Wait for DOM to load before executing the first function 
 * to show the start page and add event listeners for the buttons
@@ -42,6 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
 */
 function instructionsPopUp() {
     instructionsButton.classList.remove("hidden");
+    instructionsButton.classList.add("flex-center");
     mainPage.classList.add("hidden");
     mainImage.classList.add("hidden");
     const closeInstructionsPopUp = document.getElementById("close-instructions");
@@ -94,16 +96,30 @@ function retrieveContent() {
         qnaObjectArray = data;
         nextQuestion();
     });
-    catch(error => {
-        question.textContent = `Error- Unable to load question : ${error}`;
-    });
 }
 
+/* This function should pull through the question + answer data from the API
+* The function will also be called to go to the next question in the object array
+*/
+function nextQuestion(
+    // Extract question from API
+    let qnaObject = qnaObjectArray[questionCounter];
+    let questionText = qnaObject.question.text;
+
+    // Extract the wrong and correct answers from the response data
+    wrongAnswers = qnaObject.incorrectAnswers;
+    correctAnswer = qnaObject.correctAnswer;
+
+    updateQNA(questionText, wrongAnswers, correctAnswer);
+questionCounter++;
+);
+
+
 function displayScore();
-function nextQuestion();
 
 function checkAnswer();
 function incrementScore();
 
-function updateQNA();
+
 function shuffleArray();
+function displayScores();
