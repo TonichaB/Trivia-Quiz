@@ -66,7 +66,7 @@ function leaderboardPopUp() {
     mainImage.classList.add("hidden");
     const closeLeaderboardPopUp = document.getElementById("close-leaderboard");
     closeLeaderboardPopUp.addEventListener("click", closeLeaderboard);
-    displayScores();
+    displayLeaderboard();
 }
 
 /* This function will close the leaderboard pop up when the close button is clicked */
@@ -131,5 +131,13 @@ function updateQNA(questionText, wrongAnswers, correctAnswer) {
     // Update Question
     question.textContent = questionText;
 };
-function shuffleArray();
-function displayScores();
+
+/* Shuffle array function using the Fisher-Yates algorithm from Stack Over-flow */
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+}
+function displayLeaderboard();
