@@ -94,7 +94,7 @@ function runGame() {
     quizPage.classList.remove("hidden");
     retrieveContent();
     nextQuestion();
-}
+};
 
 /* This function should extract the quiz data sourced from https://the-trivia-api.com/ 
 * Then calling the function to load the content or catch any errors
@@ -106,7 +106,7 @@ function retrieveContent() {
         qnaObjectArray = data;
         nextQuestion();
     });
-}
+};
 
 /* This function should pull through the question + answer data from the API
 * The function will also be called to go to the next question in the object array
@@ -145,12 +145,14 @@ function checkAnswer(buttonText) {
             endGame();
         }
     }
-}
+};
+
+function showNotification();
 
 function incrementScore() {
     score = parseInt(document.getElementsByClassName("score").innerText);
     document.getElementsByClassName("score").innertext = ++score;
-}
+};
 
 function endGame() {
     const quizComplete = document.getElementById("quiz-complete");
@@ -176,8 +178,12 @@ function endGame() {
             }
         });
     });
-}
-function showNotification();
+};
+
+function resetScore() {
+    score = document.getElementById("score");
+    score.innerText = 0;
+};
 
 function updateQNA(questionText, wrongAnswers, correctAnswer) {
     const answersArray = [wrongAnswers[0], wrongAnswers[1], wrongAnswers[2], correctAnswer];
