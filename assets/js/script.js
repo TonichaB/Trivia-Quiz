@@ -13,17 +13,8 @@ const savedScores = JSON.parse(localStorage.getItem("savedScores")) || [];
 const numOfHighScores = 10;
 const highScoreString = localStorage.getItem(highScore);
 const highScores = JSON.parse(highScoreString) ?? [];
-
-const buttonA = document.getElementById("answer_a_btn");
-buttonA.addEventListener("click", () => checkAnswer(buttonA.textContent));
-const buttonB = document.getElementById("answer_b_btn");
-buttonB.addEventListener("click", () => checkAnswer(buttonB.textContent));
-const buttonC = document.getElementById("answer_c_btn");
-buttonC.addEventListener("click", () => checkAnswer(buttonC.textContent));
-const buttonD = document.getElementById("answer_d_btn");
-buttonD.addEventListener("click", () => checkAnswer(buttonD.textContent));
-
 let score = 0;
+
 let wrongAnswers;
 let correctAnswer;
 let qnaObjectArray;
@@ -36,18 +27,18 @@ let account;
 */
 
 document.addEventListener("DOMContentLoaded", function () {
-    const startButtons = document.this.querySelectorAll(".btn");
-    startButtons.forEach((startButtons) => {
-        startButtons.addEventListener("click", function () {
-            if (this.getAtribute("id") === "play-btn") {
-                console.log("Play Game");
+    const startButtons = this.querySelectorAll(".btn");
+    startButtons.forEach((startButton) => {
+        startButton.addEventListener("click", function () {
+            if (this.getAttribute("id") === "play-btn") {
                 runGame();
-            } else if (this.getAtribute("id") === "how-to-play-btn") {
-                console.log("instructions");
+                console.log("Play Game");
+            } else if (this.getAttribute("id") === "how-to-play-btn") {
                 instructionsPopUp();
-            } else if (this.getAtribute("id") === "leaderboard-btn") {
-                console.log("leaderboard");
+                console.log("instructions");
+            } else if (this.getAttribute("id") === "leaderboard-btn") {
                 leaderboardPopUp();
+                console.log("leaderboard");
             }
         });
     });
@@ -57,31 +48,47 @@ document.addEventListener("DOMContentLoaded", function () {
 * The function also listens out for the close button
 */
 function instructionsPopUp() {
-    instructionsButton.classList.remove("hidden");
-    instructionsButton.classList.add("flex-center");
-    mainPage.classList.add("hidden");
-    mainImage.classList.add("hidden");
+    if (instructionsButton.style.display = 'none') {
+        instructionsButton.style.display = 'block';
+    } else {
+        instructionsButton.style.display = 'none';
+    }
+
     const closeInstructionsPopUp = document.getElementById("close-instructions");
     closeInstructionsPopUp.addEventListener("click", closeInstructions);
 }
 
 /* This function will close the how to play pop up when the close button is clicked */
 function closeInstructions() {
-    instructionsButton.classList.add("hidden)");
-    mainPage.classList.remove("hidden");
-    mainImage.classList.remove("hidden");
+    if (instructionsButton.style.display = 'block') {
+        instructionsButton.style.display = 'none';
+    } else {
+        instructionsButton.style.display = 'block';
+    }
 }
 
 /* This function will open the leaderboard pop up whilst hiding the main menu.
 * The function also listens out for the close button
 */
 function leaderboardPopUp() {
-    leaderboardButton.classList.remove("hidden");
-    mainPage.classList.add("hidden");
-    mainImage.classList.add("hidden");
+    if (leaderboardButton.style.display = 'none') {
+        leaderboardButton.style.display = 'block';
+    } else {
+        leaderboardButton.style.display = 'none';
+    }
+
     const closeLeaderboardPopUp = document.getElementById("close-leaderboard");
     closeLeaderboardPopUp.addEventListener("click", closeLeaderboard);
     displayLeaderboard();
+}
+
+/* This function will close the leaderboard pop up when the close button is clicked */
+function closeLeaderboard() {
+    if (leaderboardButton.style.display = 'block') {
+        leaderboardButton.style.display = 'none';
+    } else {
+        leaderboardButton.style.display = 'block';
+    }
 }
 
 function displayLeaderboard() {
@@ -92,21 +99,25 @@ function displayLeaderboard() {
         .join();
 }
 
-/* This function will close the leaderboard pop up when the close button is clicked */
-function closeLeaderboard() {
-    leaderboardButton.classList.add("hidden)");
-    mainPage.classList.remove("hidden");
-    mainImage.classList.remove("hidden");
-}
-
 /* This function will take the user to the quiz to start */
 function runGame() {
-    mainPage.classList.add("hidden");
-    mainImage.classList.add("hidden");
-    quizPage.classList.remove("hidden");
+    if (quizPage.style.display = 'none') {
+        quizPage.style.display = 'block';
+    } else {
+        quizPage.style.display = 'none';
+    }
     retrieveContent();
     nextQuestion();
 }
+
+const buttonA = document.getElementById("answer-a-btn");
+buttonA.addEventListener("click", () => checkAnswer(buttonA.textContent));
+const buttonB = document.getElementById("answer-b-btn");
+buttonB.addEventListener("click", () => checkAnswer(buttonB.textContent));
+const buttonC = document.getElementById("answer-c-btn");
+buttonC.addEventListener("click", () => checkAnswer(buttonC.textContent));
+const buttonD = document.getElementById("answer-d-btn");
+buttonD.addEventListener("click", () => checkAnswer(buttonD.textContent));
 
 /* This function should extract the quiz data sourced from https://the-trivia-api.com/ 
 * Then calling the function to load the content or catch any errors

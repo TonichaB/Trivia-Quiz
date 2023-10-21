@@ -47,6 +47,10 @@
     display: none;
 }
 
+.flex {
+    display: flex;
+}
+
 /* Lets Play and How to Play links */
 .btn {
     font-size: 2.4rem;
@@ -110,7 +114,49 @@
     cursor: pointer;
 }
 
+/* Leaderboard pop-up*/
+
+#leaderboard-pop-up {
+    position: relative;
+    opacity: 1;
+    background-color: rgb(206, 56, 83);
+    border: 1px;
+    border-radius: 4px;
+    padding: 15px;
+    display: none;
+    flex-direction: column;
+    font-size: 2.5rem;
+}
+
+#close-leaderboard {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    padding: 0 10px;
+    background: transparent;
+    border: none;
+    font-size: 2.5rem;
+}
+
+#close-leaderboard:hover {
+    cursor: pointer;
+}
+
+#leaderboard-pop-up h2 {
+    margin-top: 4rem;
+}
+
 /*Game page*/
+
+.container2 {
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 2rem;
+}
 
 /* Username & Score */
 
