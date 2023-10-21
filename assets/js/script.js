@@ -93,7 +93,6 @@ function runGame() {
     quizPage.classList.remove("hidden");
     retrieveContent();
     nextQuestion();
-    displayScore();
 }
 
 /* This function should extract the quiz data sourced from https://the-trivia-api.com/ 
@@ -124,9 +123,6 @@ function nextQuestion() {
     questionCounter++;
 };
 
-
-function displayScore();
-
 /* Function to check the answer when answer button is selected to see if it's correct
 * once checked the next question will be triggered, 
 * or for last question the end screen will show
@@ -150,7 +146,11 @@ function checkAnswer(buttonText) {
     }
 }
 
-function incrementScore();
+function incrementScore() {
+    score = parseInt(document.getElementsByClassName("score").innerText);
+    document.getElementsByClassName("score").innertext = ++score;
+}
+
 function endGame();
 function showNotification();
 
