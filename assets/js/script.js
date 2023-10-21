@@ -14,6 +14,8 @@ const buttonD = document.getElementById("answer_d_btn");
 const highScore = document.getElementsByClassName("high-scores");
 const savedScores = JSON.parse(localStorage.getItem("savedScores")) || [];
 const endGame = document.getElementById("end-page");
+const numOfHighScores = 10;
+const highScoreString = localStorage.getItem(highScore);
 
 let score = 0;
 let wrongAnswers;
@@ -190,37 +192,6 @@ function incrementScore() {
     document.getElementsByClassName("score").innertext = ++score;
 };
 
-function endGame() {
-    const quizComplete = document.getElementById("quiz-complete");
-    const finalScore = document.getElementById("final-score");
-
-    mainPage.classList.add("hidden");
-    mainImage.classList.add("hidden");
-    quizPage.classList.add("hidden");
-    quizComplete.classList.remove("hidden");
-    finalScore.innerText = score;
-
-    const endGameButtons = document.querySelectorAll(".quiz-complete-btn");
-    endGameButtons.forEach((endGameButtons) => {
-        endGameButtons.addEventListener("click", function () {
-            resetScore();
-            if (this.getAtribute("id") === "try-again-btn") {
-                runGame();
-            } else if (this.getAtribute("id") === "back-to-menu-btn") {
-                mainPage.classList.remove("hidden");
-                mainImage.classList.remove("hidden");
-            } else if (this.getAtribute("id") === "end-leaderboard-btn") {
-                displayLeaderboard();
-            }
-        });
-    });
-};
-
-function resetScore() {
-    score = document.getElementById("score");
-    score.innerText = 0;
-};
-
 function updateQNA(questionText, wrongAnswers, correctAnswer) {
     const answersArray = [wrongAnswers[0], wrongAnswers[1], wrongAnswers[2], correctAnswer];
     shuffleAnswers = shuffleArray(answersArray);
@@ -240,4 +211,57 @@ function shuffleArray(array) {
         [array[i], array[j]] = [array[j], array[i]];
     }
     return array;
+}
+
+function endGame() {
+    const quizComplete = document.getElementById("quiz-complete");
+    const finalScore = document.getElementById("final-score");
+
+    mainPage.classList.add("hidden");
+    mainImage.classList.add("hidden");
+    quizPage.classList.add("hidden");
+    quizComplete.classList.remove("hidden");
+    finalScore.innerText = score;
+
+    const endGameButtons = document.querySelectorAll(".quiz-complete-btn");
+    endGameButtons.forEach((endGameButtons) => {
+        endGameButtons.addEventListener("click", function () {
+            resetScore();
+            if (this.getAtribute("id") === "try-again-btn") {
+                runGame();
+            } else if (this.getAtribute("id") === "back-to-menu-btn") {
+                mainPage.classList.remove("hidden");
+                mainImage.classList.remove("hidden");
+            } else if (this.getAtribute("id") === "end-score-btn") {
+                checkHighScore(account.score);
+            }
+        });
+    });
+};
+
+function resetScore() {
+    score = document.getElementById("score");
+    score.innerText = 0;
+};
+
+function checkHighScore(score) {
+    const lowestScore = highScore[numOfHighScores -1]?.score ?? 0;
+
+    if (score > lowestScore) {
+        saveHighScore(score, highScore);
+        displayLeaderboard();
+    }
+}
+
+function saveHighScore(score, highScore) {
+    const name = prompt('High Score! Enter your name to save:');
+    const newScore = {score,name};
+
+    highScore.push(newScore);
+
+    highScore.sort((a,b) => b.score - a.score);
+
+    highScore.splice(numOfHighScores);
+
+    localStorage.setItem(highScore, JSON.stringify(highScores));
 }

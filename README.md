@@ -64,6 +64,8 @@ To assist with the building of this quiz I have made use of the following;
 - As a general guide to build the quiz I have referred to the following YouTube tutorials:
   - [Brian Design](https://www.youtube.com/watch?v=f4fB9Xg2JEY)
   - [Codehal](https://www.youtube.com/watch?v=Vp8x8-reqZA)
+- The following websites have also been used for guidance with the code used:
+  - [Michael Karen](https://michael-karen.medium.com/how-to-save-high-scores-in-local-storage-7860baca9d68) This page was used to assist with saving high scores for the leaderboard feature.
 
 ### Content
 
