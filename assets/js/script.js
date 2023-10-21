@@ -1,28 +1,35 @@
-/* Target elements from DOM */
+/*jshint esversion: 6 */
+/*jshint esversion: 11 */
 
-const playGame = document.getElementById("play-btn");
+/* Target elements from DOM */
 const instructionsButton = document.getElementById("instructions-pop-up");
 const leaderboardButton = document.getElementById("leaderboard-pop-up");
 const mainPage = document.getElementsByClassName("container");
 const quizPage = document.getElementsByClassName("container2");
 const mainImage = document.getElementsByClassName("main-image");
 const question = document.getElementById("question");
-const buttonA = document.getElementById("answer_a_btn");
-const buttonB = document.getElementById("answer_b_btn");
-const buttonC = document.getElementById("answer_c_btn");
-const buttonD = document.getElementById("answer_d_btn");
 const highScore = document.getElementsByClassName("high-scores");
 const savedScores = JSON.parse(localStorage.getItem("savedScores")) || [];
-const endGame = document.getElementById("end-page");
 const numOfHighScores = 10;
 const highScoreString = localStorage.getItem(highScore);
+const highScores = JSON.parse(highScoreString) ?? [];
+
+const buttonA = document.getElementById("answer_a_btn");
+buttonA.addEventListener("click", () => checkAnswer(buttonA.textContent));
+const buttonB = document.getElementById("answer_b_btn");
+buttonB.addEventListener("click", () => checkAnswer(buttonB.textContent));
+const buttonC = document.getElementById("answer_c_btn");
+buttonC.addEventListener("click", () => checkAnswer(buttonC.textContent));
+const buttonD = document.getElementById("answer_d_btn");
+buttonD.addEventListener("click", () => checkAnswer(buttonD.textContent));
 
 let score = 0;
 let wrongAnswers;
 let correctAnswer;
-let shuffleQuestion = [];
 let qnaObjectArray;
 let questionCounter;
+let shuffleAnswers;
+let account;
 
 /* Wait for DOM to load before executing the first function 
 * to show the start page and add event listeners for the buttons
@@ -96,19 +103,19 @@ function runGame() {
     quizPage.classList.remove("hidden");
     retrieveContent();
     nextQuestion();
-};
+}
 
 /* This function should extract the quiz data sourced from https://the-trivia-api.com/ 
 * Then calling the function to load the content or catch any errors
 */
 function retrieveContent() {
-    fetch('https://the-trivia-api.com/v2/questions');
-    then(response => response.json()); //Parsing the data to JSON
-    then(data => {
-        qnaObjectArray = data;
-        nextQuestion();
-    });
-};
+    fetch('https://the-trivia-api.com/v2/questions')
+        .then(response => response.json()) //Parsing the data to JSON
+        .then((data) => {
+            qnaObjectArray = data;
+            nextQuestion();
+        });
+}
 
 /* This function should pull through the question + answer data from the API
 * The function will also be called to go to the next question in the object array
@@ -124,30 +131,26 @@ function nextQuestion() {
 
     updateQNA(questionText, wrongAnswers, correctAnswer);
     questionCounter++;
-};
+}
 
 /* Function to check the answer when answer button is selected to see if it's correct
 * once checked the next question will be triggered, 
 * or for last question the end screen will show
 */
 function checkAnswer(buttonText) {
-    if (!popUpActive) {
-        buttonText = buttonText.substring(buttonText.indexOf("") + 1);
-
-        if (buttonText === correctAnswer) {
-            showNotification("That's Right!", "success");
-            if (questionCounter <= 20) {
-                nextQuestion();
-            } else {
-                questionCounter = 0;
-                retrieveContent();
-            }
-            incrementScore();
+    if (buttonText === correctAnswer) {
+        showNotification("That's Right!", "success");
+        if (questionCounter <= 20) {
+            nextQuestion();
         } else {
-            endGame();
+            questionCounter = 0;
+            retrieveContent();
         }
+        incrementScore();
+    } else {
+        endGame();
     }
-};
+}
 
 function showNotification(message, type) {
     const notification = document.getElementById("notification");
@@ -190,19 +193,19 @@ function showNotification(message, type) {
 function incrementScore() {
     score = parseInt(document.getElementsByClassName("score").innerText);
     document.getElementsByClassName("score").innertext = ++score;
-};
+}
 
 function updateQNA(questionText, wrongAnswers, correctAnswer) {
     const answersArray = [wrongAnswers[0], wrongAnswers[1], wrongAnswers[2], correctAnswer];
     shuffleAnswers = shuffleArray(answersArray);
     // Update Answers
     buttonA.textContent = "A: " + shuffleAnswers[0];
-    buttonA.textContent = "B: " + shuffleAnswers[1];
-    buttonA.textContent = "C: " + shuffleAnswers[2];
-    buttonA.textContent = "D: " + shuffleAnswers[3];
+    buttonB.textContent = "B: " + shuffleAnswers[1];
+    buttonC.textContent = "C: " + shuffleAnswers[2];
+    buttonD.textContent = "D: " + shuffleAnswers[3];
     // Update Question
     question.textContent = questionText;
-};
+}
 
 /* Shuffle array function using the Fisher-Yates algorithm from Stack Over-flow */
 function shuffleArray(array) {
@@ -237,31 +240,31 @@ function endGame() {
             }
         });
     });
-};
+}
 
 function resetScore() {
     score = document.getElementById("score");
     score.innerText = 0;
-};
+}
 
 function checkHighScore(score) {
-    const lowestScore = highScore[numOfHighScores -1]?.score ?? 0;
+    const lowestScore = highScores[numOfHighScores - 1]?.score ?? 0;
 
     if (score > lowestScore) {
-        saveHighScore(score, highScore);
+        saveHighScore(score, highScores);
         displayLeaderboard();
     }
 }
 
-function saveHighScore(score, highScore) {
+function saveHighScore(score, highScores) {
     const name = prompt('High Score! Enter your name to save:');
-    const newScore = {score,name};
+    const newScore = { score, name };
 
-    highScore.push(newScore);
+    highScores.push(newScore);
 
-    highScore.sort((a,b) => b.score - a.score);
+    highScores.sort((a, b) => b.score - a.score);
 
-    highScore.splice(numOfHighScores);
+    highScores.splice(numOfHighScores);
 
     localStorage.setItem(highScore, JSON.stringify(highScores));
 }
