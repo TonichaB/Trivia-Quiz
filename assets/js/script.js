@@ -120,6 +120,16 @@ function displayScore();
 function checkAnswer();
 function incrementScore();
 
-
+function updateQNA(questionText, wrongAnswers, correctAnswer) {
+    const answersArray = [wrongAnswers[0], wrongAnswers[1], wrongAnswers[2], correctAnswer];
+    shuffleAnswers = shuffleArray(answersArray);
+    // Update Answers
+    buttonA.textContent = "A: " + shuffleAnswers[0];
+    buttonA.textContent = "B: " + shuffleAnswers[1];
+    buttonA.textContent = "C: " + shuffleAnswers[2];
+    buttonA.textContent = "D: " + shuffleAnswers[3];
+    // Update Question
+    question.textContent = questionText;
+};
 function shuffleArray();
 function displayScores();
