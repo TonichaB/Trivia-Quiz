@@ -41,6 +41,7 @@ Quiz Night is an online trivia quiz for users wanting to test their general know
       - [CSS](#css)
       - [JS Hint](#js-hint)
       - [Lighthouse](#lighthouse)
+      - [WebAim](#webaim)
     - [Bug Fixes](#bug-fixes)
   - [Back to Contents](#back-to-contents-6)
   - [Credits](#credits)
@@ -64,10 +65,19 @@ Quiz Night is an online trivia quiz for users wanting to test their general know
 ## Design
 
 ### Wireframes
+Desktop
+![desktop wireframe](assets/images/desktop-wireframe.webp)
+
+Mobile
+![mobile wireframe](assets/images/Mobile%20Wireframe.webp)
 
 ### Colour Palette
 
+![colour blind palette](assets/images/color.adobe.com_create_color-accessibility.webp)
+
 ### Typography
+
+![font image](assets/images/mooli-font.webp)
 
 [Back to Contents](#contents)
 ---
@@ -147,6 +157,11 @@ If you would like to clone this repository:
 #### JS Hint
 
 #### Lighthouse
+
+#### WebAim
+
+![contrast checker D6CCC2](assets/images/contrast-checker-%23D6CCC2.webp)
+![contrast checker DE7C8E](assets/images/contrast-checker-%23DE7C8E.webp)
 
 ### Bug Fixes
 
