@@ -70,7 +70,7 @@
 
 /*How to play button*/
 #how-to-play-btn {
-    background: linear-gradient(90deg, rgb(209, 88, 110) 0%, rgb(206, 56, 83) 100%);
+    background: linear-gradient(90deg, rgb(222, 124, 142) 0%, rgb(206, 56, 83) 100%);
 }
 
 /* Main image */
@@ -86,7 +86,7 @@
 #instructions-pop-up {
     position: relative;
     opacity: 1;
-    background-color: rgb(206, 56, 83);
+    background-color: rgb(222, 124, 142);
     border: 1px;
     border-radius: 4px;
     padding: 15px;
@@ -119,7 +119,7 @@
 #leaderboard-pop-up {
     position: relative;
     opacity: 1;
-    background-color: rgb(206, 56, 83);
+    background-color: rgb(222, 124, 142);
     border: 1px;
     border-radius: 4px;
     padding: 15px;
@@ -182,7 +182,7 @@
     margin-bottom: 2rem;
     width: 100%;
     border-radius: 5px;
-    background: rgb(206, 56, 83);
+    background: rgb(222, 124, 142);
     font-size: 2.5rem;
     justify-content: center;
     align-items: center;
@@ -201,7 +201,7 @@
 }
 
 .incorrect {
-    background: linear-gradient(45deg, rgb(228, 117, 117), 0%, rgb(255, 0, 0), 100%)
+    background: linear-gradient(45deg, rgb(222, 124, 142), 0%, rgb(206, 56, 83), 100%)
 }
 
 /* End screen */
@@ -225,5 +225,5 @@
 }
 
 #try-again-button {
-    background: linear-gradient(90deg, rgb(209, 88, 110) 0%, rgb(206, 56, 83) 100%);
+    background: linear-gradient(90deg, rgb(222, 124, 142) 0%, rgb(206, 56, 83) 100%);
 }
