@@ -5,7 +5,9 @@
 const instructionsButton = document.getElementById("instructions-pop-up");
 const leaderboardButton = document.getElementById("leaderboard-pop-up");
 const mainPage = document.getElementsByClassName("container");
-const quizPage = document.getElementsByClassName("container2");
+const quizPage = document.getElementById("container2");
+const startPage = document.getElementById("start-page");
+const initialGameState = document.getElementById("home");
 const mainImage = document.getElementsByClassName("main-image");
 const question = document.getElementById("question");
 const highScore = document.getElementsByClassName("high-scores");
@@ -13,12 +15,14 @@ const savedScores = JSON.parse(localStorage.getItem("savedScores")) || [];
 const numOfHighScores = 10;
 const highScoreString = localStorage.getItem(highScore);
 const highScores = JSON.parse(highScoreString) ?? [];
+const userScore = document.getElementById('user-score-tally');
+
 let score = 0;
 
 let wrongAnswers;
 let correctAnswer;
 let qnaObjectArray;
-let questionCounter;
+let questionCounter = 0;
 let shuffleAnswers;
 let account;
 
@@ -48,10 +52,8 @@ document.addEventListener("DOMContentLoaded", function () {
 * The function also listens out for the close button
 */
 function instructionsPopUp() {
-    if (instructionsButton.style.display = 'none') {
-        instructionsButton.style.display = 'block';
-    } else {
-        instructionsButton.style.display = 'none';
+    if (instructionsButton.style = 'none') {
+        instructionsButton.style = 'block';
     }
 
     const closeInstructionsPopUp = document.getElementById("close-instructions");
@@ -101,13 +103,11 @@ function displayLeaderboard() {
 
 /* This function will take the user to the quiz to start */
 function runGame() {
-    if (quizPage.style.display = 'none') {
+    if (quizPage.style.display == 'none') {
+        startPage.style.display = 'none';
         quizPage.style.display = 'block';
-    } else {
-        quizPage.style.display = 'none';
     }
     retrieveContent();
-    nextQuestion();
 }
 
 const buttonA = document.getElementById("answer-a-btn");
@@ -152,23 +152,31 @@ function nextQuestion() {
 * or for last question the end screen will show
 */
 function checkAnswer(buttonText) {
-    if (buttonText === correctAnswer) {
-        showNotification("That's Right!", "success");
-        if (questionCounter <= 20) {
+    const answer = buttonText.substring(3);
+    if (answer === correctAnswer) {
+        // showNotification("That's Right!", "success");
+        alert("Thats Right!");
+        if (questionCounter <= 10) {
             nextQuestion();
         } else {
             questionCounter = 0;
-            retrieveContent();
+            endGame();
         }
         incrementScore();
     } else {
-        endGame();
+        alert("That's not right!");
+        if (questionCounter <= 10) {
+            nextQuestion();
+        } else {
+            questionCounter = 0;
+            endGame();
+        }
     }
 }
 
 function showNotification(message, type) {
     const notification = document.getElementById("notification");
-    notification.style.display = "flex";
+    notification.style.display = "block";
     notification.animate(
         [
             { top: "-210px" },
@@ -205,8 +213,10 @@ function showNotification(message, type) {
 }
 
 function incrementScore() {
-    score = parseInt(document.getElementsByClassName("score").innerText);
-    document.getElementsByClassName("score").innertext = ++score;
+    score = parseInt(userScore.textContent);
+
+    score++;
+    userScore.textContent = score;
 }
 
 function updateQNA(questionText, wrongAnswers, correctAnswer) {
