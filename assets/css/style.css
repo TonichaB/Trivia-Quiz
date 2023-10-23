@@ -203,3 +203,27 @@
 .incorrect {
     background: linear-gradient(45deg, rgb(228, 117, 117), 0%, rgb(255, 0, 0), 100%)
 }
+
+/* End screen */
+
+#quiz-complete {
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 2rem;
+    display: none;
+}
+
+.quiz-complete-button {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+#try-again-button {
+    background: linear-gradient(90deg, rgb(209, 88, 110) 0%, rgb(206, 56, 83) 100%);
+}
