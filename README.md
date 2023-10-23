@@ -13,21 +13,28 @@ Quiz Night is an online trivia quiz for users wanting to test their general know
 - [Quiz Night Trivia Quiz](#quiz-night-trivia-quiz)
   - [Contents](#contents)
   - [User Experience](#user-experience)
+  - [Back to Contents](#back-to-contents)
   - [User Stories](#user-stories)
+  - [Back to Contents](#back-to-contents-1)
   - [Design](#design)
     - [Wireframes](#wireframes)
     - [Colour Palette](#colour-palette)
+    - [Typography](#typography)
+  - [Back to Contents](#back-to-contents-2)
   - [Features and Functionality](#features-and-functionality)
     - [Start Page](#start-page)
     - [Main Quiz Page](#main-quiz-page)
     - [End Page](#end-page)
+  - [Back to Contents](#back-to-contents-3)
   - [Technologies Used](#technologies-used)
     - [Languages Used](#languages-used)
+  - [Back to Contents](#back-to-contents-4)
   - [Deployment and Local Development](#deployment-and-local-development)
     - [Deployment](#deployment)
     - [Local Development](#local-development)
       - [How to Fork](#how-to-fork)
       - [How to Clone](#how-to-clone)
+  - [Back to Contents](#back-to-contents-5)
   - [Testing](#testing)
     - [Validators](#validators)
       - [HTML](#html)
@@ -35,6 +42,7 @@ Quiz Night is an online trivia quiz for users wanting to test their general know
       - [JS Hint](#js-hint)
       - [Lighthouse](#lighthouse)
     - [Bug Fixes](#bug-fixes)
+  - [Back to Contents](#back-to-contents-6)
   - [Credits](#credits)
     - [Code Used](#code-used)
     - [Content](#content)
@@ -45,10 +53,12 @@ Quiz Night is an online trivia quiz for users wanting to test their general know
 
 ## User Experience
 
+[Back to Contents](#contents)
 ---
 
 ## User Stories
 
+[Back to Contents](#contents)
 ---
 
 ## Design
@@ -57,8 +67,9 @@ Quiz Night is an online trivia quiz for users wanting to test their general know
 
 ### Colour Palette
 
-###Typography
+### Typography
 
+[Back to Contents](#contents)
 ---
 
 ## Features and Functionality
@@ -68,6 +79,8 @@ Quiz Night is an online trivia quiz for users wanting to test their general know
 ### Main Quiz Page
 
 ### End Page
+
+[Back to Contents](#contents)
 ---
 
 ## Technologies Used
@@ -91,6 +104,7 @@ The following technologies have been utilised in the production of this website;
 
 HTML, CSS, Javascript
 
+[Back to Contents](#contents)
 ---
 
 ## Deployment and Local Development
@@ -119,6 +133,7 @@ If you would like to clone this repository:
 4. Open the terminal in your code editor and change the current working directory to the location you want to use for the cloned directory.
 5. Type 'git clone' into the terminal and paste the link copied in step 3 above. Press enter.
 
+[Back to Contents](#contents)
 ---
 
 ## Testing
@@ -139,6 +154,7 @@ During the process of building the quiz I came accross a couple of bugs to be fi
 
 The first bug I came across related to the functionality of the start page buttons. The play button to start the quiz was not functioning, and the instructions and how to play buttons would open the relevant divs but showing at the bottom of the page. I spoke with my Mentor, Luke, who pointed out the sections of my code causing the bug, making use of the Google Developer Tools. Using his guidance and further testing with Google Developer Tools, I sourced the issue to the javascript functions to hide the start page when each button is clicked.
 
+[Back to Contents](#contents)
 ---
 
 ## Credits
@@ -167,3 +183,5 @@ I would like to acknowledge Code Institute and their Full Stack Development cour
 I would also like to thank my fellow students and members of the Stack community whose contributions within the Slack channels have proven to be very helpful when facing challenges during the project.
 
 Lastly I would like to thank my Mentor Luke who helped me overcome my biggest bug hurdle when completing the project.
+
+[Back to Contents](#contents)
