@@ -75,10 +75,8 @@ function closeInstructions() {
 function leaderboardPopUp() {
     if (leaderboardButton.style.display = 'none') {
         leaderboardButton.style.display = 'block';
-    } else {
-        leaderboardButton.style.display = 'none';
+        mainPage.style.display = 'none';
     }
-
     const closeLeaderboardPopUp = document.getElementById("close-leaderboard");
     closeLeaderboardPopUp.addEventListener("click", closeLeaderboard);
     displayLeaderboard();
@@ -88,8 +86,7 @@ function leaderboardPopUp() {
 function closeLeaderboard() {
     if (leaderboardButton.style.display = 'block') {
         leaderboardButton.style.display = 'none';
-    } else {
-        leaderboardButton.style.display = 'block';
+        mainPage.style.display = 'block';
     }
 }
 
