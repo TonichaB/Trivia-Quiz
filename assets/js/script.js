@@ -252,12 +252,14 @@ function endGame() {
     endGameButtons.forEach((endGameButtons) => {
         endGameButtons.addEventListener("click", function () {
             resetScore();
-            if (this.getAtribute("id") === "try-again-btn") {
+            if (this.getAttribute("id") === "try-again-btn") {
                 runGame();
-            } else if (this.getAtribute("id") === "back-to-menu-btn") {
-                mainPage.classList.remove("hidden");
-                mainImage.classList.remove("hidden");
-            } else if (this.getAtribute("id") === "end-score-btn") {
+            } else if (this.getAttribute("id") === "back-to-menu-btn") {
+                if (quizComplete.style = 'block') {
+                    quizComplete.style.display = 'none';
+                    startPage.style.display = 'block';
+                };
+            } else if (this.getAttribute("id") === "end-score-btn") {
                 checkHighScore(account.score);
             }
         });
@@ -265,8 +267,8 @@ function endGame() {
 }
 
 function resetScore() {
-    score = document.getElementById("score");
-    score.innerText = 0;
+    let score = document.getElementById("user-score-tally");
+    score.innerHTML = 0;
 }
 
 function checkHighScore(score) {
