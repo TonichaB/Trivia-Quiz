@@ -4,7 +4,7 @@
 /* Target elements from DOM */
 const instructionsButton = document.getElementById("instructions-pop-up");
 const leaderboardButton = document.getElementById("leaderboard-pop-up");
-const mainPage = document.getElementsByClassName("container");
+const mainPage = document.getElementById("container");
 const quizPage = document.getElementById("container2");
 const startPage = document.getElementById("start-page");
 const initialGameState = document.getElementById("home");
@@ -53,7 +53,8 @@ document.addEventListener("DOMContentLoaded", function () {
 */
 function instructionsPopUp() {
     if (instructionsButton.style = 'none') {
-        instructionsButton.style = 'block';
+        instructionsButton.style.display = 'block';
+        mainPage.style.display = 'none';
     }
 
     const closeInstructionsPopUp = document.getElementById("close-instructions");
@@ -64,8 +65,7 @@ function instructionsPopUp() {
 function closeInstructions() {
     if (instructionsButton.style.display = 'block') {
         instructionsButton.style.display = 'none';
-    } else {
-        instructionsButton.style.display = 'block';
+        mainPage.style.display = 'block';
     }
 }
 
