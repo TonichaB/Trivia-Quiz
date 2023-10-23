@@ -153,7 +153,7 @@ function checkAnswer(buttonText) {
     if (answer === correctAnswer) {
         // showNotification("That's Right!", "success");
         alert("Thats Right!");
-        if (questionCounter <= 10) {
+        if (questionCounter <= 9) {
             nextQuestion();
         } else {
             questionCounter = 0;
@@ -162,7 +162,7 @@ function checkAnswer(buttonText) {
         incrementScore();
     } else {
         alert("That's not right!");
-        if (questionCounter <= 10) {
+        if (questionCounter <= 9) {
             nextQuestion();
         } else {
             questionCounter = 0;
@@ -241,10 +241,11 @@ function endGame() {
     const quizComplete = document.getElementById("quiz-complete");
     const finalScore = document.getElementById("final-score");
 
-    mainPage.classList.add("hidden");
-    mainImage.classList.add("hidden");
-    quizPage.classList.add("hidden");
-    quizComplete.classList.remove("hidden");
+    if (quizPage.style = 'block') {
+        quizPage.style.display = 'none';
+        quizComplete.style.display = 'block';
+    }
+
     finalScore.innerText = score;
 
     const endGameButtons = document.querySelectorAll(".quiz-complete-btn");
