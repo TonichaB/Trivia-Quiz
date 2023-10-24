@@ -14,7 +14,7 @@ const highScore = document.getElementById("high-scores");
 const savedScores = JSON.parse(localStorage.getItem("savedScores")) || [];
 const numOfHighScores = 10;
 const highScoreString = localStorage.getItem(highScore);
-const highScores = JSON.parse(highScoreString) ?? [];
+const highScores = JSON.parse(highScoreString) || [];
 const userScore = document.getElementById('user-score-tally');
 const userName = document.getElementById("username");
 
