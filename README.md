@@ -65,6 +65,7 @@ Quiz Night is an online trivia quiz for users wanting to test their general know
 ## Design
 
 ### Wireframes
+
 Desktop
 ![desktop wireframe](assets/images/desktop-wireframe.webp)
 

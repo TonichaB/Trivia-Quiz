@@ -16,6 +16,7 @@ const numOfHighScores = 10;
 const highScoreString = localStorage.getItem(highScore);
 const highScores = JSON.parse(highScoreString) ?? [];
 const userScore = document.getElementById('user-score-tally');
+const userName = document.getElementById("username");
 
 let score = 0;
 
@@ -24,7 +25,6 @@ let correctAnswer;
 let qnaObjectArray;
 let questionCounter = 0;
 let shuffleAnswers;
-let account;
 
 /* Wait for DOM to load before executing the first function 
 * to show the start page and add event listeners for the buttons
@@ -171,6 +171,7 @@ function checkAnswer(buttonText) {
     }
 }
 
+/* Function to show notification for correct/incorrect answer */
 function showNotification(message, type) {
     const notification = document.getElementById("notification");
     if (notification.style = 'none') {
@@ -211,6 +212,7 @@ function showNotification(message, type) {
     }, 4000);
 }
 
+/* Function to increase score after correct answer */
 function incrementScore() {
     score = parseInt(userScore.textContent);
 
@@ -218,6 +220,7 @@ function incrementScore() {
     userScore.textContent = score;
 }
 
+/* Function to update content for next question */
 function updateQNA(questionText, wrongAnswers, correctAnswer) {
     const answersArray = [wrongAnswers[0], wrongAnswers[1], wrongAnswers[2], correctAnswer];
     shuffleAnswers = shuffleArray(answersArray);
@@ -239,6 +242,7 @@ function shuffleArray(array) {
     return array;
 }
 
+/* Show end screen function */
 function endGame() {
     const quizComplete = document.getElementById("quiz-complete");
     const finalScore = document.getElementById("final-score");
@@ -262,17 +266,20 @@ function endGame() {
                     startPage.style.display = 'block';
                 };
             } else if (this.getAttribute("id") === "end-score-btn") {
-                checkHighScore(account.score);
+                checkHighScore(userName.score);
             }
         });
     });
 }
 
+/* Function to re-set score when new game is started */
 function resetScore() {
     let score = document.getElementById("user-score-tally");
     score.innerHTML = 0;
 }
-
+/* Function to show leaderboard
+* I have used code from https://michael-karen.medium.com/how-to-save-high-scores-in-local-storage-7860baca9d68 to assist with this function
+*/
 function checkHighScore(score) {
     const lowestScore = highScores[numOfHighScores - 1]?.score ?? 0;
 
@@ -282,6 +289,7 @@ function checkHighScore(score) {
     }
 }
 
+/* Function to save user name and score to leaderboard */
 function saveHighScore(score, highScores) {
     const name = prompt('High Score! Enter your name to save:');
     const newScore = { score, name };
