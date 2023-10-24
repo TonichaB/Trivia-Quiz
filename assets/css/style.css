@@ -227,3 +227,16 @@
 #try-again-button {
     background: linear-gradient(90deg, rgb(222, 124, 142) 0%, rgb(206, 56, 83) 100%);
 }
+
+/* Notifications */
+.notification {
+    opacity: 1;
+    background-color: rgb(222, 124, 142);
+    border: 1px;
+    border-radius: 4px;
+    padding: 15px;
+    flex-direction: column;
+    font-size: 2.5rem;
+    width: 75%;
+    position: absolute;
+}

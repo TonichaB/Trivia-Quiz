@@ -151,7 +151,7 @@ function nextQuestion() {
 function checkAnswer(buttonText) {
     const answer = buttonText.substring(3);
     if (answer === correctAnswer) {
-        // showNotification("That's Right!", "success");
+        showNotification("That's Right!", "success");
         alert("Thats Right!");
         if (questionCounter <= 9) {
             nextQuestion();
@@ -173,7 +173,9 @@ function checkAnswer(buttonText) {
 
 function showNotification(message, type) {
     const notification = document.getElementById("notification");
-    notification.style.display = "block";
+    if (notification.style = 'none') {
+        notification.style.display = 'block';
+    }
     notification.animate(
         [
             { top: "-210px" },
