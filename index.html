@@ -41,13 +41,13 @@
               class="main-image"
             />
             <!-- Play, Instructions and Leaderboard Buttons -->
-            <button class="btn" id="play-btn">
+            <button class="btn" id="play-btn" aria-label="start game button">
               Let's Play! <i class="fa-regular fa-circle-play"></i>
             </button>
-            <button class="btn" id="how-to-play-btn">
+            <button class="btn" id="how-to-play-btn" aria-label="open instructions button">
               How to Play? <i class="fa-regular fa-circle-question"></i>
             </button>
-            <button class="btn" id="leaderboard-btn">
+            <button class="btn" id="leaderboard-btn" aria-label="open leaderboard button">
               Leaderboard <i class="fa-solid fa-crown"></i>
             </button>
           </div>
@@ -63,13 +63,13 @@
                     <li>Submit your score at the end to see how you compare on our leaderboard!</li>
                 </ol>
             </p>
-            <button id="close-instructions"><i class="fa-regular fa-circle-xmark"></i></button>
+            <button id="close-instructions" aria-label="close instructions button"><i class="fa-regular fa-circle-xmark"></i></button>
         </div>
         <!-- Leaderboard Pop Up -->
         <div id="leaderboard-pop-up" class="leaderboard hidden">
             <h2 id="leaderboard-h2">Leaderboard</h2>
             <p id = high-scores></p>
-            <button id="close-leaderboard"><i class="fa-regular fa-circle-xmark"></i></button>
+            <button id="close-leaderboard" aria-label="close leaderboard button"><i class="fa-regular fa-circle-xmark"></i></button>
         </div>
       </section>
       <!-- Main Quiz Section -->
@@ -128,10 +128,10 @@
             <p>Final Score: <span id="final-score">0</span>/10</p>
             <p>Add your details below to submit your score to the Leaderboard!</p>
             <label for="username">Enter Name</label>
-            <input id="username" class="usernameBox" type="text" placeholder="Enter your name">
-            <button id="end-score-btn" class="btn quiz-complete-btn" type="submit" onclick="saveHighScore(event)" value="Save">Save Score!</button>
-            <button id="try-again-btn" class="btn quiz-complete-btn">Try Again!</button>
-            <button id="back-to-menu-btn" class="btn quiz-complete-btn">Back to Start!</button>
+            <input id="username" class="usernameBox" type="text" placeholder="Enter your name" aria-label="enter your name to save score">
+            <button id="end-score-btn" class="btn quiz-complete-btn" type="submit" onclick="saveHighScore(event)" value="Save" aria-label="save score button">Save Score!</button>
+            <button id="try-again-btn" class="btn quiz-complete-btn" aria-label="restart quiz button">Try Again!</button>
+            <button id="back-to-menu-btn" class="btn quiz-complete-btn" aria-label="return to homepage button">Back to Start!</button>
         </div>
       </section>
     </main>
