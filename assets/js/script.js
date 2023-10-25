@@ -17,6 +17,9 @@ const highScoreString = localStorage.getItem(highScore);
 const highScores = JSON.parse(highScoreString) || [];
 const userScore = document.getElementById('user-score-tally');
 const userName = document.getElementById("username");
+const notification = document.getElementById("notification");
+const quizComplete = document.getElementById("quiz-complete");
+const finalScore = document.getElementById("final-score");
 
 let score = 0;
 
@@ -100,6 +103,8 @@ function displayLeaderboard() {
 
 /* This function will take the user to the quiz to start */
 function runGame() {
+    quizComplete.style.display = 'none';
+    startPage.style.display = 'none';
     if (quizPage.style.display == 'none') {
         startPage.style.display = 'none';
         quizPage.style.display = 'block';
@@ -152,7 +157,7 @@ function checkAnswer(buttonText) {
     const answer = buttonText.substring(3);
     if (answer === correctAnswer) {
         showNotification("That's Right!", "success");
-        alert("Thats Right!");
+        // alert("Thats Right!");
         if (questionCounter <= 9) {
             nextQuestion();
         } else {
@@ -161,7 +166,8 @@ function checkAnswer(buttonText) {
         }
         incrementScore();
     } else {
-        alert("That's not right!");
+        showNotification("Mmmm...Not Quite!", "error");
+        // alert("That's not right!");
         if (questionCounter <= 9) {
             nextQuestion();
         } else {
@@ -173,7 +179,6 @@ function checkAnswer(buttonText) {
 
 /* Function to show notification for correct/incorrect answer */
 function showNotification(message, type) {
-    const notification = document.getElementById("notification");
     if (notification.style = 'none') {
         notification.style.display = 'block';
     }
@@ -188,7 +193,7 @@ function showNotification(message, type) {
         }
     );
 
-    notification.innerHTML = `<p>${message}</p>`;
+    notification.innerHTML = `<p id="notificationText">${message}</p>`;
 
     if (type === "success") {
         notification.style.backgroundColour = "green";
@@ -209,7 +214,14 @@ function showNotification(message, type) {
                 fill: "forwards"
             }
         );
+        hideNotification();
     }, 4000);
+}
+
+function hideNotification() {
+    if (notification.style = 'block') {
+        notification.style.display = 'none';
+    }
 }
 
 /* Function to increase score after correct answer */
@@ -244,8 +256,9 @@ function shuffleArray(array) {
 
 /* Show end screen function */
 function endGame() {
-    const quizComplete = document.getElementById("quiz-complete");
-    const finalScore = document.getElementById("final-score");
+
+    quizComplete.style.display = 'none';
+    quizPage.style.display == 'none';
 
     if (quizPage.style = 'block') {
         quizPage.style.display = 'none';
