@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Link to CSS file-->
-    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/style.css">
     <!-- Font Awesome Script-->
     <script
       src="https://kit.fontawesome.com/96afde0967.js"
@@ -16,12 +16,10 @@
     <!--meta tags for search engines-->
     <meta
       name="description"
-      content="Quiz Night Trivia: An online trivia quiz for game nights"
-    />
+      content="Quiz Night Trivia: An online trivia quiz for game nights">
     <meta
       name="keywords"
-      content="trivia, quiz, game, general-knowledge, gamenight"
-    />
+      content="trivia, quiz, game, general-knowledge, gamenight">
     <!-- Google Fonts-->
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Mooli&display=swap');
@@ -37,9 +35,8 @@
             <!-- Main Image -->
             <img
               src="assets/images/quiz-night-home.webp"
-              alt="Quiz night logo image"
-              class="main-image"
-            />
+              alt="Quiz night logo"
+              class="main-image">
             <!-- Play, Instructions and Leaderboard Buttons -->
             <button class="btn" id="play-btn" aria-label="start game button">
               Let's Play! <i class="fa-regular fa-circle-play"></i>
@@ -77,11 +74,11 @@
         <div class="container2" id="container2" style="display:none">
           <div id="game" class="justify-center flex-column">
             <div class="score">
-              <p id="user-score-tally">0</p><p>/10</p>
+              <h2 id="user-score-tally">0</h2><h2>/10</h2>
             </div>
             <div>
               <div class="questions-box">
-                <p id="question">Question will show here</p>
+                <h2 id="question">Question will show here</h2>
               </div>
               <div class="answer-buttons">
                 <button
@@ -119,7 +116,7 @@
         <!-- Notification for correct answer -->
         <div id="notification" style="display: none;">
             <p></p>
-            <img src="assets/images/correct-answer.webp" id="correct-image" aria-label="correct answer image"> 
+            <img src="assets/images/correct-answer.webp" id="correct-image" alt="correct answer image"> 
         </div>
       </section>
       <section id="end-page">
