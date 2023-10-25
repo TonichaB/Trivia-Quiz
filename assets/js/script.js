@@ -215,7 +215,7 @@ function showNotification(message, type) {
             }
         );
         hideNotification();
-    }, 4000);
+    }, 1000);
 }
 
 function hideNotification() {
