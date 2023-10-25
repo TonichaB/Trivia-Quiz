@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Link to CSS file-->
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css" />
     <!-- Font Awesome Script-->
     <script
       src="https://kit.fontawesome.com/96afde0967.js"
@@ -16,19 +16,21 @@
     <!--meta tags for search engines-->
     <meta
       name="description"
-      content="Quiz Night Trivia: An online trivia quiz for game nights">
+      content="Quiz Night Trivia: An online trivia quiz for game nights"
+    />
     <meta
       name="keywords"
-      content="trivia, quiz, game, general-knowledge, gamenight">
+      content="trivia, quiz, game, general-knowledge, gamenight"
+    />
     <!-- Google Fonts-->
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Mooli&display=swap');
+      @import url("https://fonts.googleapis.com/css2?family=Mooli&display=swap");
     </style>
   </head>
   <body>
     <header></header>
     <main>
-        <!-- Home page -->
+      <!-- Home page -->
       <section id="start-page">
         <div class="container" id="container">
           <div id="home" class="flex-column flex center">
@@ -36,49 +38,76 @@
             <img
               src="assets/images/quiz-night-home.webp"
               alt="Quiz night logo"
-              class="main-image">
+              class="main-image"
+            />
             <!-- Play, Instructions and Leaderboard Buttons -->
             <button class="btn" id="play-btn" aria-label="start game button">
               Let's Play! <i class="fa-regular fa-circle-play"></i>
             </button>
-            <button class="btn" id="how-to-play-btn" aria-label="open instructions button">
+            <button
+              class="btn"
+              id="how-to-play-btn"
+              aria-label="open instructions button"
+            >
               How to Play? <i class="fa-regular fa-circle-question"></i>
             </button>
-            <button class="btn" id="leaderboard-btn" aria-label="open leaderboard button">
+            <button
+              class="btn"
+              id="leaderboard-btn"
+              aria-label="open leaderboard button"
+            >
               Leaderboard <i class="fa-solid fa-crown"></i>
             </button>
           </div>
         </div>
         <!-- Instructions Pop Up -->
         <div id="instructions-pop-up" class="instructions hidden">
-            <h2 id="instructions-h2">How to Play?</h2>
-            <p>
-                <ol>
-                    <li>Click Let's Play! to start the quiz!</li>
-                    <li>The quiz is multiple choice, and contains 20 random questions.</li>
-                    <li>To answer, simply click on the button the answer you think is correct.</li>
-                    <li>Submit your score at the end to see how you compare on our leaderboard!</li>
-                </ol>
-            </p>
-            <button id="close-instructions" aria-label="close instructions button"><i class="fa-regular fa-circle-xmark"></i></button>
+          <h2 id="instructions-h2">How to Play?</h2>
+          <ol>
+            <li>Click Let's Play! to start the quiz!</li>
+            <li>
+              The quiz is multiple choice, and contains 20 random questions.
+            </li>
+            <li>
+              To answer, simply click on the button the answer you think is
+              correct.
+            </li>
+            <li>
+              Submit your score at the end to see how you compare on our
+              leaderboard!
+            </li>
+          </ol>
+          <button
+            id="close-instructions"
+            aria-label="close instructions button"
+          >
+            <i class="fa-regular fa-circle-xmark"></i>
+          </button>
         </div>
         <!-- Leaderboard Pop Up -->
         <div id="leaderboard-pop-up" class="leaderboard hidden">
-            <h2 id="leaderboard-h2">Leaderboard</h2>
-            <p id = high-scores></p>
-            <button id="close-leaderboard" aria-label="close leaderboard button"><i class="fa-regular fa-circle-xmark"></i></button>
+          <h2 id="leaderboard-h2">Leaderboard</h2>
+          <p id="high-scores"></p>
+          <button id="close-leaderboard" aria-label="close leaderboard button">
+            <i class="fa-regular fa-circle-xmark"></i>
+          </button>
         </div>
       </section>
       <!-- Main Quiz Section -->
       <section id="game-page">
-        <div class="container2" id="container2" style="display:none">
+        <div class="container2" id="container2" style="display: none">
           <div id="game" class="justify-center flex-column">
             <!-- Notification for correct answer -->
-            <div id="notification" style="display: none;">
-                <img src="assets/images/correct-answer.webp" id="correct-image" alt="correct answer image">
+            <div id="notification" style="display: none">
+              <img
+                src="assets/images/correct-answer.webp"
+                id="correct-image"
+                alt="correct answer image"
+              />
             </div>
             <div class="score">
-              <h2 id="user-score-tally">0</h2><h2>/10</h2>
+              <h2 id="user-score-tally">0</h2>
+              <h2>/10</h2>
             </div>
             <div>
               <div class="questions-box">
@@ -120,14 +149,41 @@
       </section>
       <section id="end-page">
         <div id="quiz-complete" class="container3">
-            <h2>Quiz Completed!</h2>
-            <p>Final Score: <span id="final-score">0</span>/10</p>
-            <p>Add your details below to submit your score to the Leaderboard!</p>
-            <label for="username">Enter Name</label>
-            <input id="username" class="usernameBox" type="text" placeholder="Enter your name" aria-label="enter your name to save score">
-            <button id="end-score-btn" class="btn quiz-complete-btn" type="submit" onclick="saveHighScore(event)" value="Save" aria-label="save score button">Save Score!</button>
-            <button id="try-again-btn" class="btn quiz-complete-btn" aria-label="restart quiz button">Try Again!</button>
-            <button id="back-to-menu-btn" class="btn quiz-complete-btn" aria-label="return to homepage button">Back to Start!</button>
+          <h2>Quiz Completed!</h2>
+          <p>Final Score: <span id="final-score">0</span>/10</p>
+          <p>Add your details below to submit your score to the Leaderboard!</p>
+          <label for="username">Enter Name</label>
+          <input
+            id="username"
+            class="usernameBox"
+            type="text"
+            placeholder="Enter your name"
+            aria-label="enter your name to save score"
+          />
+          <button
+            id="end-score-btn"
+            class="btn quiz-complete-btn"
+            type="submit"
+            onclick="saveHighScore(event)"
+            value="Save"
+            aria-label="save score button"
+          >
+            Save Score!
+          </button>
+          <button
+            id="try-again-btn"
+            class="btn quiz-complete-btn"
+            aria-label="restart quiz button"
+          >
+            Try Again!
+          </button>
+          <button
+            id="back-to-menu-btn"
+            class="btn quiz-complete-btn"
+            aria-label="return to homepage button"
+          >
+            Back to Start!
+          </button>
         </div>
       </section>
     </main>
