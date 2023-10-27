@@ -283,6 +283,12 @@
     background: linear-gradient(90deg, rgb(222, 124, 142) 0%, rgb(206, 56, 83) 100%);
 }
 
+.end-image {
+    width: 60%;
+    margin-top: 2rem;
+    margin-left: 20%;
+}
+
 /* Notifications */
 #notificationText {
     opacity: 1;
