@@ -75,10 +75,13 @@
 
 /* Main image */
 .main-image {
-    max-width: 100%;
+    width: 90%;
     height: auto;
     margin-bottom: 5rem;
     justify-content: center;
+    margin-top: 5rem;
+    text-align: center;
+    margin-left: 5%;
 }
 
 /* Instructions Pop Up */
@@ -194,7 +197,17 @@
     padding: 2rem;
 }
 
-/* Username & Score */
+.quiz-image {
+    width: 60%;
+    height: auto;
+    margin-bottom: 2rem;
+    justify-content: center;
+    margin-top: 2rem;
+    text-align: center;
+    margin-left: 20%;
+}
+
+/* Score */
 
 .score {
     color: white;
@@ -245,8 +258,7 @@
 #quiz-complete {
     width: 100vw;
     height: 100vh;
-    justify-content: center;
-    align-items: center;
+    text-align: center;
     max-width: 80rem;
     margin: 0 auto;
     padding: 2rem;
@@ -272,7 +284,7 @@
     text-align: center;
 }
 
-.quiz-complete-button {
+.quiz-complete button {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -286,13 +298,11 @@
 .end-image {
     width: 60%;
     margin-top: 2rem;
-    margin-left: 20%;
 }
 
 #quiz-complete input {
     width: 80%;
     font-size: 2rem;
-    justify-content: center;
     margin-top: 2rem;
     margin-bottom: 2rem;
 }
