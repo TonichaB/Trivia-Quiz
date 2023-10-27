@@ -253,6 +253,25 @@
     display: none;
 }
 
+#quiz-complete h2 {
+    color: rgb(255, 255, 255);
+    font-size: 3rem;
+    text-align: center;
+    margin-top: 3rem;
+}
+
+#quiz-complete p {
+    color: rgb(255, 255, 255);
+    font-size: 2rem;
+    text-align: center;
+}
+
+#quiz-complete p span {
+    color: rgb(255, 255, 255);
+    font-size: 2rem;
+    text-align: center;
+}
+
 .quiz-complete-button {
     display: flex;
     justify-content: center;
@@ -260,7 +279,7 @@
     align-items: center;
 }
 
-#try-again-button {
+#try-again-btn {
     background: linear-gradient(90deg, rgb(222, 124, 142) 0%, rgb(206, 56, 83) 100%);
 }
 
