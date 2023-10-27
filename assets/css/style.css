@@ -321,7 +321,7 @@
     position: fixed;
     margin-bottom: 15px;
     z-index: 9999;
-    top: 50%;
+    top: 44%;
     left: 10%;
 }
 
@@ -329,7 +329,10 @@
     /* Adjust the font size as needed for smaller screens */
 
     #notificationText {
-        font-size: 3rem;
+        font-size: 2rem;
+        top: 21%;
+        width: 70%;
+        left: 20%
     }
 }
 
