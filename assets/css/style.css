@@ -88,15 +88,36 @@
     opacity: 1;
     background-color: rgb(222, 124, 142);
     border: 1px;
-    border-radius: 4px;
+    border-radius: 6px;
     padding: 15px;
     display: none;
     flex-direction: column;
     font-size: 2.5rem;
+    margin-top: 10rem;
+    margin-left: 10%;
+    max-width: 80%;
 }
 
 #instructions-pop-up h2 {
     margin-top: 4rem;
+    font-size: 5rem;
+    text-align: center;
+}
+
+#instructions-pop-up ol {
+    margin-top: 2rem;
+    list-style-position: inside;
+}
+
+#instructions-pop-up ol li {
+    font-size: 3rem;
+    text-align: center;
+}
+
+.instructions-image {
+    width: 40%;
+    margin-top: 2rem;
+    margin-left: 25%;
 }
 
 /* Close Instructions */
@@ -252,4 +273,8 @@
     #notificationText {
         font-size: 3rem;
     }
+}
+
+#instructions-pop-up ol li {
+    font-size: 2rem;
 }
