@@ -289,6 +289,14 @@
     margin-left: 20%;
 }
 
+#quiz-complete input {
+    width: 80%;
+    font-size: 2rem;
+    justify-content: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
 /* Notifications */
 #notificationText {
     opacity: 1;
