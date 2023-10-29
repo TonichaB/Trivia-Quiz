@@ -20,21 +20,21 @@ Quiz Night is an online trivia quiz for users wanting to have fun with friends t
     - [Wireframes](#wireframes)
     - [Colour Palette](#colour-palette)
     - [Typography](#typography)
-  - [Back to Contents](#back-to-contents)
   - [Features and Functionality](#features-and-functionality)
     - [Start Page](#start-page)
     - [Main Quiz Page](#main-quiz-page)
     - [End Page](#end-page)
-  - [Back to Contents](#back-to-contents-1)
+    - [Notifications](#notifications)
+  - [Back to Contents](#back-to-contents)
   - [Technologies Used](#technologies-used)
     - [Languages Used](#languages-used)
-  - [Back to Contents](#back-to-contents-2)
+  - [Back to Contents](#back-to-contents-1)
   - [Deployment and Local Development](#deployment-and-local-development)
     - [Deployment](#deployment)
     - [Local Development](#local-development)
       - [How to Fork](#how-to-fork)
       - [How to Clone](#how-to-clone)
-  - [Back to Contents](#back-to-contents-3)
+  - [Back to Contents](#back-to-contents-2)
   - [Testing](#testing)
     - [Validators](#validators)
       - [HTML](#html)
@@ -43,7 +43,7 @@ Quiz Night is an online trivia quiz for users wanting to have fun with friends t
       - [Lighthouse](#lighthouse)
       - [WebAim](#webaim)
     - [Bug Fixes](#bug-fixes)
-  - [Back to Contents](#back-to-contents-4)
+  - [Back to Contents](#back-to-contents-3)
   - [Credits](#credits)
     - [Code Used](#code-used)
     - [Content](#content)
@@ -110,18 +110,33 @@ Mobile
 ### Typography
 
 ![font image](assets/images/mooli-font.webp)
-
 [Back to Contents](#contents)
+
 ---
 
 ## Features and Functionality
 
 ### Start Page
+Desktop <br>
+
+Mobile <br>
 
 ### Main Quiz Page
+Desktop<br>
 
+Mobile<br>
 ### End Page
+Desktop <br>
 
+Mobile <br>
+
+### Notifications
+
+Correct <br>
+
+Incorrect <br>
+
+Score Saved <br>
 [Back to Contents](#contents)
 ---
 
@@ -199,8 +214,10 @@ If you would like to clone this repository:
 
 During the process of building the quiz I came accross a couple of bugs to be fixed.
 
-The first bug I came across related to the functionality of the start page buttons. The play button to start the quiz was not functioning, and the instructions and how to play buttons would open the relevant divs but showing at the bottom of the page. I spoke with my Mentor, Luke, who pointed out the sections of my code causing the bug, making use of the Google Developer Tools. Using his guidance and further testing with Google Developer Tools, I sourced the issue to the javascript functions to hide the start page when each button is clicked.
-
+1. The first bug I came across related to the functionality of the start page buttons. The play button to start the quiz was not functioning, and the instructions and how to play buttons would open the relevant divs but showing at the bottom of the page. I spoke with my Mentor, Luke, who pointed out the sections of my code causing the bug, making use of the Google Developer Tools. Using his guidance and further testing with Google Developer Tools, I sourced the issue to the javascript functions to hide the start page when each button is clicked.
+2. When working with the end page functionalities, I came accross the second bug. Despite entering in a username to save the score achieved, an additional alert was appearing asking again for the username to be given before saving. Following this the score would not be saved in the local storage for the device to be displayed on the leaderboard.
+![second bug screenshot]()
+3. 
 [Back to Contents](#contents)
 ---
 
