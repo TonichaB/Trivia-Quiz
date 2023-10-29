@@ -2,7 +2,7 @@
 
 Visit the live website [here!](https://tonichab.github.io/Trivia-Quiz/)
 
-Quiz Night is an online trivia quiz for users wanting to test their general knowledge.
+Quiz Night is an online trivia quiz for users wanting to have fun with friends testing their general knowledge. The objective is to try and answer multiple choice questions correctly
 
 ![responsive website example image] ()
 
@@ -13,28 +13,28 @@ Quiz Night is an online trivia quiz for users wanting to test their general know
 - [Quiz Night Trivia Quiz](#quiz-night-trivia-quiz)
   - [Contents](#contents)
   - [User Experience](#user-experience)
-  - [Back to Contents](#back-to-contents)
-  - [User Stories](#user-stories)
-  - [Back to Contents](#back-to-contents-1)
+    - [Target Audience](#target-audience)
+    - [User Expectations](#user-expectations)
+    - [User Stories](#user-stories)
   - [Design](#design)
     - [Wireframes](#wireframes)
     - [Colour Palette](#colour-palette)
     - [Typography](#typography)
-  - [Back to Contents](#back-to-contents-2)
+  - [Back to Contents](#back-to-contents)
   - [Features and Functionality](#features-and-functionality)
     - [Start Page](#start-page)
     - [Main Quiz Page](#main-quiz-page)
     - [End Page](#end-page)
-  - [Back to Contents](#back-to-contents-3)
+  - [Back to Contents](#back-to-contents-1)
   - [Technologies Used](#technologies-used)
     - [Languages Used](#languages-used)
-  - [Back to Contents](#back-to-contents-4)
+  - [Back to Contents](#back-to-contents-2)
   - [Deployment and Local Development](#deployment-and-local-development)
     - [Deployment](#deployment)
     - [Local Development](#local-development)
       - [How to Fork](#how-to-fork)
       - [How to Clone](#how-to-clone)
-  - [Back to Contents](#back-to-contents-5)
+  - [Back to Contents](#back-to-contents-3)
   - [Testing](#testing)
     - [Validators](#validators)
       - [HTML](#html)
@@ -43,7 +43,7 @@ Quiz Night is an online trivia quiz for users wanting to test their general know
       - [Lighthouse](#lighthouse)
       - [WebAim](#webaim)
     - [Bug Fixes](#bug-fixes)
-  - [Back to Contents](#back-to-contents-6)
+  - [Back to Contents](#back-to-contents-4)
   - [Credits](#credits)
     - [Code Used](#code-used)
     - [Content](#content)
@@ -54,12 +54,43 @@ Quiz Night is an online trivia quiz for users wanting to test their general know
 
 ## User Experience
 
-[Back to Contents](#contents)
----
+### Target Audience
 
-## User Stories
+This site is targeted for webusers everywhere who want to test their general knowledge. It can be used by single users testing their knowledge, or in group settings to have fun. All that is needed is a web browser with JavaScript enabled to make full use of the quiz. The site has a competitive aspect through users comparing their scores through the leaderboard.
 
+### User Expectations
+
+- An effective navigation system amendable for all screen sizes.
+- Easy to locate instructions and leaderboard sections, accessible from the start screen.
+- A perceptive game interface with clear controls and notifications aiding in the gameplay.
+- A clear way in which to save the score for comparison on the leaderboard.
+- A simply way to restart the quiz without navigating through the start page.
+- A practical quiz website available to view on all devices.
+
+### User Stories
+
+As a player, I want a smooth functional experience with quick loading times for an enjoyable experience. <br>
+The design of the website is intentionally simple to allow for quick loading times. All iamges used are also in WEBP format as the current quickest for web use. <br>
+
+As a player, I want to see my score progress as I play the quiz. <br>
+The quiz interface includes an interactive score tracker that shows the users how many correct answers they have throughout the quiz. <br>
+
+As a player, I want to be notified if my answer is correct or incorrect. <br>
+As each answer is selected a clear notification will appear on all devices to confirm whether or not the users answer is correct, whilst the next question is able to load in the background. <br>
+
+As a player, I want the ability to save my score to compare with other users.<br> 
+Once a player has completed the quiz they will be prompted to add a username in order to save their score to view on the leaderboard. <br>
+
+As a player, I want to easily start the quiz again without needing to go back to the start page. <br>
+Once the quiz has completed, the player can restart the quiz using a Try Again button without needing to save their score or start from the main page. <br>
+
+As a player, I want to compare my score with other users through a leaderboard. <br>
+From the main page a user can view the leaderboard to see scores previously saved. Currently these scores will pull from a users local storage. <br>
+
+As a player, I want a webpage with an appropriate amount of content so as not to distract me from the quiz.<br>
+The site is kept simple to allow the players a straight forward experience without overly complicated navigation or functions. <br>
 [Back to Contents](#contents)
+
 ---
 
 ## Design
