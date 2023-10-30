@@ -117,9 +117,9 @@ Mobile<br>
 ### Start Page
 
 Desktop <br>
-![desktop start page preview]()<br>
+![desktop start page preview](assets/images/Desktop-Main-Page.webp)<br>
 Mobile <br>
-![mobile start page preview]()
+![mobile start page preview](assets/images/Mobile-Main-Page.webp)
 
 ### Main Quiz Page
 
@@ -131,16 +131,16 @@ Mobile<br>
 ### End Page
 
 Desktop <br>
-![desktop end page preview]() <br>
+![desktop end page preview](assets/images/Desktop-end-page.webp) <br>
 Mobile <br>
-![mobile end page preview]()
+![mobile end page preview](assets/images/Mobile-end-page.webp)
 
 ### Notifications
 
 Correct <br>
-![correct notification]()<br>
+![correct notification](assets/images/correct-notification.webp)<br>
 Incorrect <br>
-![incorrect notification]() <br>
+![incorrect notification](assets/images/incorrect-notification.webp)<br>
 Score Saved <br>
 ![score saved notification]()<br>
 
@@ -239,7 +239,7 @@ During the process of building the quiz I came accross a couple of bugs to be fi
 
 1. The first bug I came across related to the functionality of the start page buttons. The play button to start the quiz was not functioning, and the instructions and how to play buttons would open the relevant divs but showing at the bottom of the page. I spoke with my Mentor, Luke, who pointed out the sections of my code causing the bug, making use of the Google Developer Tools. Using his guidance and further testing with Google Developer Tools, I sourced the issue to the javascript functions to hide the start page when each button is clicked.
 2. When working with the end page functionalities, I came accross the second bug. Despite entering in a username to save the score achieved, an additional alert was appearing asking again for the username to be given before saving. Following this the score would not be saved in the local storage for the device to be displayed on the leaderboard. <br>
-![second bug screenshot]()
+![second bug screenshot](assets/images/bug2-screenshot.webp)
 3.  <br>
 [Back to Contents](#contents)
 
