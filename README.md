@@ -29,13 +29,11 @@ Quiz Night is an online trivia quiz for users wanting to have fun with friends t
     - [Accesibility](#accesibility)
   - [Technologies Used](#technologies-used)
     - [Languages Used](#languages-used)
-  - [Back to Contents](#back-to-contents)
   - [Deployment and Local Development](#deployment-and-local-development)
     - [Deployment](#deployment)
     - [Local Development](#local-development)
       - [How to Fork](#how-to-fork)
       - [How to Clone](#how-to-clone)
-  - [Back to Contents](#back-to-contents-1)
   - [Testing](#testing)
     - [Validators](#validators)
       - [HTML](#html)
@@ -44,7 +42,6 @@ Quiz Night is an online trivia quiz for users wanting to have fun with friends t
       - [Lighthouse](#lighthouse)
       - [WebAim](#webaim)
     - [Bug Fixes](#bug-fixes)
-  - [Back to Contents](#back-to-contents-2)
   - [Credits](#credits)
     - [Code Used](#code-used)
     - [Content](#content)
@@ -70,25 +67,25 @@ This site is targeted for webusers everywhere who want to test their general kno
 
 ### User Stories
 
-As a player, I want a smooth functional experience with quick loading times for an enjoyable experience. <br>
+1. As a player, I want a smooth functional experience with quick loading times for an enjoyable experience. <br>
 The design of the website is intentionally simple to allow for quick loading times. All iamges used are also in WEBP format as the current quickest for web use. <br>
 
-As a player, I want to see my score progress as I play the quiz. <br>
+2. As a player, I want to see my score progress as I play the quiz. <br>
 The quiz interface includes an interactive score tracker that shows the users how many correct answers they have throughout the quiz. <br>
 
-As a player, I want to be notified if my answer is correct or incorrect. <br>
+3. As a player, I want to be notified if my answer is correct or incorrect. <br>
 As each answer is selected a clear notification will appear on all devices to confirm whether or not the users answer is correct, whilst the next question is able to load in the background. <br>
 
-As a player, I want the ability to save my score to compare with other users.<br> 
+4. As a player, I want the ability to save my score to compare with other users.<br> 
 Once a player has completed the quiz they will be prompted to add a username in order to save their score to view on the leaderboard. <br>
 
-As a player, I want to easily start the quiz again without needing to go back to the start page. <br>
+5. As a player, I want to easily start the quiz again without needing to go back to the start page. <br>
 Once the quiz has completed, the player can restart the quiz using a Try Again button without needing to save their score or start from the main page. <br>
 
-As a player, I want to compare my score with other users through a leaderboard. <br>
+6. As a player, I want to compare my score with other users through a leaderboard. <br>
 From the main page a user can view the leaderboard to see scores previously saved. Currently these scores will pull from a users local storage. <br>
 
-As a player, I want a webpage with an appropriate amount of content so as not to distract me from the quiz.<br>
+7. As a player, I want a webpage with an appropriate amount of content so as not to distract me from the quiz.<br>
 The site is kept simple to allow the players a straight forward experience without overly complicated navigation or functions. <br>
 [Back to Contents](#contents)
 
@@ -98,10 +95,10 @@ The site is kept simple to allow the players a straight forward experience witho
 
 ### Wireframes
 
-Desktop
+Desktop<br>
 ![desktop wireframe](assets/images/desktop-wireframe.webp)
 
-Mobile
+Mobile<br>
 ![mobile wireframe](assets/images/Mobile%20Wireframe.webp)
 
 ### Colour Palette
@@ -118,26 +115,33 @@ Mobile
 ## Features and Functionality
 
 ### Start Page
+
 Desktop <br>
-
+![desktop start page preview]()
 Mobile <br>
-
+![mobile start page preview]()
 ### Main Quiz Page
+
 Desktop<br>
-
+![desktop quiz page preview]()
 Mobile<br>
-### End Page
-Desktop <br>
+![mobile quiz page preview]()
 
+### End Page
+
+Desktop <br>
+![desktop end page preview]()
 Mobile <br>
+![mobile end page preview]()
 
 ### Notifications
 
 Correct <br>
-
+![correct notification]()
 Incorrect <br>
-
+![incorrect notification]()
 Score Saved <br>
+![score saved notification]()
 
 ### Future Development
 
@@ -152,8 +156,8 @@ To provide accessibility to the website the following has been incorporated;
 1. Aria-labels, alt tags and labels have been used for supportive technologies such as screen readers.
 2. Semantic elements have been used for easy navigation through each page.
 3. The colour scheme selected is also made suitable for colour-blind users as shown in the design section above.
-4. I have also carried out accessibility checks using the WAVE Chrome Extension which has confirmed no accessibility errors. Please see the below results for the site;
-![Wave validation image]()
+4. I have also carried out accessibility checks using the WAVE Chrome Extension which has confirmed no accessibility errors. Please see the below results for the site;<br>
+![Wave validation image]()<br>
 [Back to Contents](#contents)
 
 ---
@@ -178,8 +182,8 @@ The following technologies have been utilised in the production of this website;
 ### Languages Used
 
 HTML, CSS, Javascript
-
 [Back to Contents](#contents)
+
 ---
 
 ## Deployment and Local Development
@@ -207,8 +211,8 @@ If you would like to clone this repository:
 3. Click on the code button, and copy your preferred clone link.
 4. Open the terminal in your code editor and change the current working directory to the location you want to use for the cloned directory.
 5. Type 'git clone' into the terminal and paste the link copied in step 3 above. Press enter.
-
 [Back to Contents](#contents)
+
 ---
 
 ## Testing
@@ -225,7 +229,7 @@ If you would like to clone this repository:
 
 #### WebAim
 
-![contrast checker D6CCC2](assets/images/contrast-checker-%23D6CCC2.webp)
+![contrast checker D6CCC2](assets/images/contrast-checker-%23D6CCC2.webp)<br>
 ![contrast checker DE7C8E](assets/images/contrast-checker-%23DE7C8E.webp)
 
 ### Bug Fixes
@@ -233,10 +237,11 @@ If you would like to clone this repository:
 During the process of building the quiz I came accross a couple of bugs to be fixed.
 
 1. The first bug I came across related to the functionality of the start page buttons. The play button to start the quiz was not functioning, and the instructions and how to play buttons would open the relevant divs but showing at the bottom of the page. I spoke with my Mentor, Luke, who pointed out the sections of my code causing the bug, making use of the Google Developer Tools. Using his guidance and further testing with Google Developer Tools, I sourced the issue to the javascript functions to hide the start page when each button is clicked.
-2. When working with the end page functionalities, I came accross the second bug. Despite entering in a username to save the score achieved, an additional alert was appearing asking again for the username to be given before saving. Following this the score would not be saved in the local storage for the device to be displayed on the leaderboard.
+2. When working with the end page functionalities, I came accross the second bug. Despite entering in a username to save the score achieved, an additional alert was appearing asking again for the username to be given before saving. Following this the score would not be saved in the local storage for the device to be displayed on the leaderboard. <br>
 ![second bug screenshot]()
 3. 
 [Back to Contents](#contents)
+
 ---
 
 ## Credits
@@ -265,5 +270,4 @@ I would like to acknowledge Code Institute and their Full Stack Development cour
 I would also like to thank my fellow students and members of the Stack community whose contributions within the Slack channels have proven to be very helpful when facing challenges during the project.
 
 Lastly I would like to thank my Mentor Luke who helped me overcome my biggest bug hurdle when completing the project.
-
 [Back to Contents](#contents)
