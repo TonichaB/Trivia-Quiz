@@ -275,6 +275,7 @@ function endGame() {
                 runGame();
             } else if (this.getAttribute("id") === "back-to-menu-btn") {
                 checkHighScore(userName.score);
+                showNotification("Score Saved!", "success");
                 if (quizComplete.style = 'block') {
                     quizComplete.style.display = 'none';
                     startPage.style.display = 'block';
