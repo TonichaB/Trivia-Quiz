@@ -274,12 +274,11 @@ function endGame() {
             if (this.getAttribute("id") === "try-again-btn") {
                 runGame();
             } else if (this.getAttribute("id") === "back-to-menu-btn") {
+                checkHighScore(userName.score);
                 if (quizComplete.style = 'block') {
                     quizComplete.style.display = 'none';
                     startPage.style.display = 'block';
                 };
-            } else if (this.getAttribute("id") === "end-score-btn") {
-                checkHighScore(userName.score);
             }
         });
     });
