@@ -96,7 +96,7 @@ The site is kept simple to allow the players a straight forward experience witho
 ### Wireframes
 
 Desktop<br>
-![desktop wireframe](assets/images/desktop-wireframe.webp)
+![desktop wireframe](assets/images/desktop-wireframe.webp)<br>
 
 Mobile<br>
 ![mobile wireframe](assets/images/Mobile%20Wireframe.webp)
@@ -107,7 +107,7 @@ Mobile<br>
 
 ### Typography
 
-![font image](assets/images/mooli-font.webp)
+![font image](assets/images/mooli-font.webp)<br>
 [Back to Contents](#contents)
 
 ---
@@ -117,31 +117,32 @@ Mobile<br>
 ### Start Page
 
 Desktop <br>
-![desktop start page preview]()
+![desktop start page preview]()<br>
 Mobile <br>
 ![mobile start page preview]()
+
 ### Main Quiz Page
 
 Desktop<br>
-![desktop quiz page preview]()
+![desktop quiz page preview]() <br>
 Mobile<br>
 ![mobile quiz page preview]()
 
 ### End Page
 
 Desktop <br>
-![desktop end page preview]()
+![desktop end page preview]() <br>
 Mobile <br>
 ![mobile end page preview]()
 
 ### Notifications
 
 Correct <br>
-![correct notification]()
+![correct notification]()<br>
 Incorrect <br>
-![incorrect notification]()
+![incorrect notification]() <br>
 Score Saved <br>
-![score saved notification]()
+![score saved notification]()<br>
 
 ### Future Development
 
@@ -181,7 +182,7 @@ The following technologies have been utilised in the production of this website;
 
 ### Languages Used
 
-HTML, CSS, Javascript
+HTML, CSS, Javascript <br>
 [Back to Contents](#contents)
 
 ---
@@ -210,7 +211,7 @@ If you would like to clone this repository:
 2. Go to the repository for this project- /TonichaB/Niche-Crystals/
 3. Click on the code button, and copy your preferred clone link.
 4. Open the terminal in your code editor and change the current working directory to the location you want to use for the cloned directory.
-5. Type 'git clone' into the terminal and paste the link copied in step 3 above. Press enter.
+5. Type 'git clone' into the terminal and paste the link copied in step 3 above. Press enter. <br>
 [Back to Contents](#contents)
 
 ---
@@ -239,7 +240,7 @@ During the process of building the quiz I came accross a couple of bugs to be fi
 1. The first bug I came across related to the functionality of the start page buttons. The play button to start the quiz was not functioning, and the instructions and how to play buttons would open the relevant divs but showing at the bottom of the page. I spoke with my Mentor, Luke, who pointed out the sections of my code causing the bug, making use of the Google Developer Tools. Using his guidance and further testing with Google Developer Tools, I sourced the issue to the javascript functions to hide the start page when each button is clicked.
 2. When working with the end page functionalities, I came accross the second bug. Despite entering in a username to save the score achieved, an additional alert was appearing asking again for the username to be given before saving. Following this the score would not be saved in the local storage for the device to be displayed on the leaderboard. <br>
 ![second bug screenshot]()
-3. 
+3.  <br>
 [Back to Contents](#contents)
 
 ---
@@ -269,5 +270,5 @@ I would like to acknowledge Code Institute and their Full Stack Development cour
 
 I would also like to thank my fellow students and members of the Stack community whose contributions within the Slack channels have proven to be very helpful when facing challenges during the project.
 
-Lastly I would like to thank my Mentor Luke who helped me overcome my biggest bug hurdle when completing the project.
+Lastly I would like to thank my Mentor Luke who helped me overcome my biggest bug hurdle when completing the project.<br>
 [Back to Contents](#contents)
