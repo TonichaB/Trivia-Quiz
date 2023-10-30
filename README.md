@@ -25,16 +25,17 @@ Quiz Night is an online trivia quiz for users wanting to have fun with friends t
     - [Main Quiz Page](#main-quiz-page)
     - [End Page](#end-page)
     - [Notifications](#notifications)
-  - [Back to Contents](#back-to-contents)
+    - [Future Development](#future-development)
+    - [Accesibility](#accesibility)
   - [Technologies Used](#technologies-used)
     - [Languages Used](#languages-used)
-  - [Back to Contents](#back-to-contents-1)
+  - [Back to Contents](#back-to-contents)
   - [Deployment and Local Development](#deployment-and-local-development)
     - [Deployment](#deployment)
     - [Local Development](#local-development)
       - [How to Fork](#how-to-fork)
       - [How to Clone](#how-to-clone)
-  - [Back to Contents](#back-to-contents-2)
+  - [Back to Contents](#back-to-contents-1)
   - [Testing](#testing)
     - [Validators](#validators)
       - [HTML](#html)
@@ -43,7 +44,7 @@ Quiz Night is an online trivia quiz for users wanting to have fun with friends t
       - [Lighthouse](#lighthouse)
       - [WebAim](#webaim)
     - [Bug Fixes](#bug-fixes)
-  - [Back to Contents](#back-to-contents-3)
+  - [Back to Contents](#back-to-contents-2)
   - [Credits](#credits)
     - [Code Used](#code-used)
     - [Content](#content)
@@ -137,7 +138,24 @@ Correct <br>
 Incorrect <br>
 
 Score Saved <br>
+
+### Future Development
+
+In future developments of this project I would like to build a backround database for the storage of user scores, so that the leaderboard function would also users from around the globe to compare their scores. Currently this will be limited to only show previous scores from the same device using local storage.<br> 
+
+An additional feature I would include would be difficulty levels for the quiz. This would allow users control over the difficulty of the questions best suited for them, whilst also allowing for an additional sense of achievement for those able to work through the different difficulty levels. 
+
+### Accesibility
+
+To provide accessibility to the website the following has been incorporated;
+
+1. Aria-labels, alt tags and labels have been used for supportive technologies such as screen readers.
+2. Semantic elements have been used for easy navigation through each page.
+3. The colour scheme selected is also made suitable for colour-blind users as shown in the design section above.
+4. I have also carried out accessibility checks using the WAVE Chrome Extension which has confirmed no accessibility errors. Please see the below results for the site;
+![Wave validation image]()
 [Back to Contents](#contents)
+
 ---
 
 ## Technologies Used
