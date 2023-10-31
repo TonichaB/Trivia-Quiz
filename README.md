@@ -148,7 +148,9 @@ Score Saved <br>
 
 In future developments of this project I would like to build a backround database for the storage of user scores, so that the leaderboard function would also users from around the globe to compare their scores. Currently this will be limited to only show previous scores from the same device using local storage.<br> 
 
-An additional feature I would include would be difficulty levels for the quiz. This would allow users control over the difficulty of the questions best suited for them, whilst also allowing for an additional sense of achievement for those able to work through the different difficulty levels. 
+An additional feature I would include would be difficulty levels for the quiz. This would allow users control over the difficulty of the questions best suited for them, whilst also allowing for an additional sense of achievement for those able to work through the different difficulty levels.<br>
+
+Lastly I would like to develop a feedback form for players to complete and share feedback on the quiz. This could include feedback regarding any of the questions/answers to ensure the quiz is correct, or feedback on the mechanics of the quiz to improve the user experience.
 
 ### Accesibility
 
