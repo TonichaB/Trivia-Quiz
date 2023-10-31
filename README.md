@@ -4,7 +4,7 @@ Visit the live website [here!](https://tonichab.github.io/Trivia-Quiz/)
 
 Quiz Night is an online trivia quiz for users wanting to have fun with friends testing their general knowledge. The objective is to try and answer multiple choice questions correctly
 
-![responsive website example image](assets/images/Am-I-Responsive.webp)
+![responsive website example image](assets/images/am-i-responsive.webp)
 
 ---
 
@@ -103,7 +103,7 @@ Desktop<br>
 ![desktop wireframe](assets/images/desktop-wireframe.webp)<br>
 
 Mobile<br>
-![mobile wireframe](assets/images/Mobile%20Wireframe.webp)
+![mobile wireframe](assets/images/mobile-wireframe.webp)
 
 ### Colour Palette
 
@@ -126,35 +126,35 @@ In order to improve the optimisation of the website's content relevance, and the
 
 The starting page for the site shows the main site logo image, with clearly demonstrating buttons to navigate to the quiz, see how to play, or view the leaderboard. The start page consists of 3 main buttons that are easy to locate for the user. Firstly, there is a Let's Play button that allows the user to start the quiz straight away should they wish. This is better for repeat users who may not need to view the instructions again. A how to play button will open a pop up with instructions to help new players before starting the quiz. Lastly there is a button to open a leaderboard pop up, currently available to show any locally stored saved scores to the user, encouraging them to try the quiz again to beat their scores.<br>
 Desktop <br>
-![desktop start page preview](assets/images/Desktop-Main-Page.webp)<br>
+![desktop start page preview](assets/images/desktop-main-page.webp)<br>
 Mobile <br>
-![mobile start page preview](assets/images/Mobile-Main-Page.webp)
+![mobile start page preview](assets/images/mobile-main-page.webp)
 
 ### Main Quiz Page
 
 Once the quiz is started, the main quiz page will appear, presenting the player with their first question and multiple choice answers to select from. There is also a score indicator allowing the user to keep track of their score as they progress through the quiz. For each question answered, a notification will appear to confirm to the user whether they have answered correctly, or incorrectly.<br>
 Desktop<br>
-![desktop quiz page preview](assets/images/Desktop-Quiz-Page.webp) <br>
+![desktop quiz page preview](assets/images/desktop-quiz-page.webp) <br>
 Mobile<br>
-![mobile quiz page preview](assets/images/Mobile-Quiz-Page.webp)
+![mobile quiz page preview](assets/images/mobile-quiz-page.webp)
 
 ### End Page
 
 At the end of the quiz the player will be taken to a final page, giving them to option to save their score should they wish. When the user selects to save their score they will also be taken back to the main page so they can view their newly saved score on the leaderboard. If a player hasn't done as well as they hoped, they do also have the option to restart the quiz without needing to save their score.<br>
 Desktop <br>
-![desktop end page preview](assets/images/Desktop-End-Page.webp) <br>
+![desktop end page preview](assets/images/desktop-end-page.webp) <br>
 Mobile <br>
-![mobile end page preview](assets/images/Mobile-End-Screen.webp)
+![mobile end page preview](assets/images/mobile-end-screen.webp)
 
 ### How To Play Pop Up
 
 From the main page, if the How to Play button is selected the player will be presented with the following pop up containing the instructions for playing the quiz. This pop up can then be closed by the user allowing them to proceed to play when they are ready to do so.<br>
-![how to play pop up](assets/images/How-to-play.webp)
+![how to play pop up](assets/images/how-to-play.webp)
 
 ### Leaderboard Pop Up
 
 From the main page, if the Leaderboard button is selected, the player will be presented with the following pop up, which over time will show a high scores list of previously saved scores by the user. This will encourage players to save their scores to try and reach the top of the leaderboard.<br>
-![leaderboard pop up](assets/images/Leaderboard.webp)
+![leaderboard pop up](assets/images/leaderboard.webp)
 
 ### Notifications
 
@@ -182,7 +182,7 @@ To provide accessibility to the website the following has been incorporated;
 2. Semantic elements have been used for easy navigation through each page.
 3. The colour scheme selected is also made suitable for colour-blind users as shown in the design section above.
 4. I have also carried out accessibility checks using the WAVE Chrome Extension which has confirmed no accessibility errors. Please see the below results for the site;<br>
-![Wave validation image](assets/images/Wave-Validator.webp)<br>
+![Wave validation image](assets/images/wave-validator.webp)<br>
 [Back to Contents](#contents)
 
 ---
@@ -276,22 +276,22 @@ The Niche Crystals site has been tested using the following browsers:
 
 #### HTML
 
-![HTML validator Results-passed](assets/images/HMTL-Validator.webp)
+![HTML validator Results-passed](assets/images/html-validator.webp)
 
 #### CSS
 
-![CSS Validator Results- Passed](assets/images/CSS-Validator.webp)
+![CSS Validator Results- Passed](assets/images/css-validator.webp)
 
 #### JS Hint
 
 #### Lighthouse
 
-![Lighthouse Validator Results- Passed](assets/images/Lighthouse-Validator.webp)
+![Lighthouse Validator Results- Passed](assets/images/lighthouse-validator.webp)
 
 #### WebAim
 
-![contrast checker D6CCC2](assets/images/contrast-checker-%23D6CCC2.webp)<br>
-![contrast checker DE7C8E](assets/images/contrast-checker-%23DE7C8E.webp)
+![contrast checker D6CCC2](assets/images/contrast-checker-%23d6ccc2.webp)<br>
+![contrast checker DE7C8E](assets/images/contrast-checker-%23de7c8e.webp)
 
 ### Bug Fixes
 
