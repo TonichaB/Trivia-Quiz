@@ -273,8 +273,8 @@ function endGame() {
             resetScore();
             if (this.getAttribute("id") === "try-again-btn") {
                 runGame();
-            } else if (this.getAttribute("id") === "back-to-menu-btn") {
-                checkHighScore(userName.value);
+            } else if (this.getAttribute("id") === "end-score-btn") {
+                checkHighScore(finalScore.innerText);
                 showNotification("Score Saved!", "success");
                 if (quizComplete.style.display === 'block') {
                     quizComplete.style.display = 'none';
@@ -304,7 +304,7 @@ function checkHighScore(score) {
 
 /* Function to save user name and score to leaderboard */
 function saveHighScore(score, highScores) {
-    const name = document.getElementById('username');
+    const name = document.getElementById('username').value;
     const newScore = { score, name };
 
     highScores.push(newScore);
