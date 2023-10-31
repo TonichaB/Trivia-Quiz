@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Link to CSS file-->
-    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/style.css">
     <!-- Font Awesome Script-->
     <script
       src="https://kit.fontawesome.com/96afde0967.js"
@@ -16,12 +16,10 @@
     <!--meta tags for search engines-->
     <meta
       name="description"
-      content="Quiz Night Trivia: An online trivia quiz for game nights"
-    />
+      content="Quiz Night Trivia: An online trivia quiz for game nights">
     <meta
       name="keywords"
-      content="trivia, quiz, game, general-knowledge, gamenight"
-    />
+      content="trivia, quiz, game, general-knowledge, gamenight">
     <!-- Google Fonts-->
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Mooli&display=swap");
@@ -38,8 +36,7 @@
             <img
               src="assets/images/quiz-night-home.webp"
               alt="Quiz night logo"
-              class="main-image"
-            />
+              class="main-image">
             <!-- Play, Instructions and Leaderboard Buttons -->
             <button class="btn" id="play-btn" aria-label="start game button">
               Let's Play! <i class="fa-regular fa-circle-play"></i>
@@ -80,8 +77,7 @@
           <img
             src="assets/images/quiz-night-home.webp"
             alt="Quiz night logo"
-            class="instructions-image"
-          />
+            class="instructions-image">
           <button
             id="close-instructions"
             aria-label="close instructions button"
@@ -99,8 +95,7 @@
           <img
             src="assets/images/quiz-night-home.webp"
             alt="Quiz night logo"
-            class="leaderboard-image"
-          />
+            class="leaderboard-image">
         </div>
       </section>
       <!-- Main Quiz Section -->
@@ -110,22 +105,14 @@
             <img
               src="assets/images/quiz-night-home.webp"
               alt="Quiz night logo"
-              class="quiz-image"
-            />
+              class="quiz-image">
             <!-- Notification for correct answer -->
             <div id="notification" style="display: none">
-              <img
-                src="assets/images/correct-answer.webp"
-                id="correct-image"
-                alt="correct answer image"
-              />
             </div>
             <div class="score">
-              <h2>
-                Score:
+              <h2>Score: </h2>
                 <h2 id="user-score-tally">0</h2>
-                /10
-              </h2>
+                <span>/ 10</span>
             </div>
             <div>
               <div class="questions-box">
@@ -170,8 +157,7 @@
           <img
             src="assets/images/quiz-night-home.webp"
             alt="Quiz night logo"
-            class="end-image"
-          />
+            class="end-image">
           <h2>Quiz Completed!</h2>
           <p>Final Score: <span id="final-score">0</span>/10</p>
           <p>Add your details below to submit your score to the Leaderboard!</p>
@@ -181,8 +167,7 @@
             class="usernameBox"
             type="text"
             placeholder="Enter your name"
-            aria-label="enter your name to save score"
-          />
+            aria-label="enter your name to save score">
           <button
             id="end-score-btn"
             class="btn quiz-complete-btn"

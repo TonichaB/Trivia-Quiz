@@ -210,10 +210,22 @@
 /* Score */
 
 .score {
+    display: flex;
     color: white;
     font-size: 4rem;
     text-align: left;
     margin-bottom: 3rem;
+    align-items: center;
+    flex-direction: row;
+}
+
+#user-score-tally {
+    margin-right: 5px;
+    margin-left: 5px;
+}
+.score span {
+    display: inline-block;
+    font-weight: bold;
 }
 
 /*Question div*/

@@ -7,8 +7,6 @@ const leaderboardButton = document.getElementById("leaderboard-pop-up");
 const mainPage = document.getElementById("container");
 const quizPage = document.getElementById("container2");
 const startPage = document.getElementById("start-page");
-const initialGameState = document.getElementById("home");
-const mainImage = document.getElementsByClassName("main-image");
 const question = document.getElementById("question");
 const highScore = document.getElementById("high-scores");
 const savedScores = JSON.parse(localStorage.getItem("savedScores")) || [];
@@ -260,7 +258,7 @@ function endGame() {
     quizComplete.style.display = 'none';
     quizPage.style.display == 'none';
 
-    if (quizPage.style = 'block') {
+    if (quizPage.style.display === 'block') {
         quizPage.style.display = 'none';
         quizComplete.style.display = 'block';
     }
@@ -274,12 +272,12 @@ function endGame() {
             if (this.getAttribute("id") === "try-again-btn") {
                 runGame();
             } else if (this.getAttribute("id") === "back-to-menu-btn") {
-                checkHighScore(userName.score);
+                checkHighScore(userName.value);
                 showNotification("Score Saved!", "success");
-                if (quizComplete.style = 'block') {
+                if (quizComplete.style.display === 'block') {
                     quizComplete.style.display = 'none';
                     startPage.style.display = 'block';
-                };
+                }
             }
         });
     });
@@ -304,7 +302,7 @@ function checkHighScore(score) {
 
 /* Function to save user name and score to leaderboard */
 function saveHighScore(score, highScores) {
-    const name = prompt('High Score! Enter your name to save:');
+    const name = document.getElementById('username');
     const newScore = { score, name };
 
     highScores.push(newScore);
@@ -313,5 +311,6 @@ function saveHighScore(score, highScores) {
 
     highScores.splice(numOfHighScores);
 
-    localStorage.setItem(highScore, JSON.stringify(highScores));
+    localStorage.setItem("highScores", JSON.stringify(highScores));
+    displayLeaderboard();
 }
