@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", function () {
 * The function also listens out for the close button
 */
 function instructionsPopUp() {
-    if (instructionsButton.style === 'none' || instructionsButton.style.display === '') {
+    if (instructionsButton.style.display === 'none' || instructionsButton.style.display === '') {
         instructionsButton.style.display = 'block';
         mainPage.style.display = 'none';
         quizPage.style.display = 'none';
