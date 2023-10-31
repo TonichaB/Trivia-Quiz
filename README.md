@@ -118,6 +118,7 @@ Mobile<br>
 
 ### Start Page
 
+The starting page for the site shows the main site logo image, with clearly demonstrating buttons to navigate to the quiz, see how to play, or view the leaderboard. The start page consists of 3 main buttons that are easy to locate for the user. Firstly, there is a Let's Play button that allows the user to start the quiz straight away should they wish. This is better for repeat users who may not need to view the instructions again. A how to play button will open a pop up with instructions to help new players before starting the quiz. Lastly there is a button to open a leaderboard pop up, currently available to show any locally stored saved scores to the user, encouraging them to try the quiz again to beat their scores.<br>
 Desktop <br>
 ![desktop start page preview](assets/images/Desktop-Main-Page.webp)<br>
 Mobile <br>
@@ -125,6 +126,7 @@ Mobile <br>
 
 ### Main Quiz Page
 
+Once the quiz is started, the main quiz page will appear, presenting the player with their first question and multiple choice answers to select from. There is also a score indicator allowing the user to keep track of their score as they progress through the quiz. For each question answered, a notification will appear to confirm to the user whether they have answered correctly, or incorrectly.<br>
 Desktop<br>
 ![desktop quiz page preview](assets/images/Desktop-Quiz-Page.webp) <br>
 Mobile<br>
@@ -132,6 +134,7 @@ Mobile<br>
 
 ### End Page
 
+At the end of the quiz the player will be taken to a final page, giving them to option to save their score should they wish. When the user selects to save their score they will also be taken back to the main page so they can view their newly saved score on the leaderboard. If a player hasn't done as well as they hoped, they do also have the option to restart the quiz without needing to save their score.<br>
 Desktop <br>
 ![desktop end page preview](assets/images/Desktop-End-Page.webp) <br>
 Mobile <br>
@@ -139,14 +142,17 @@ Mobile <br>
 
 ### How To Play Pop Up
 
+From the main page, if the How to Play button is selected the player will be presented with the following pop up containing the instructions for playing the quiz. This pop up can then be closed by the user allowing them to proceed to play when they are ready to do so.<br>
 ![how to play pop up](assets/images/How-to-play.webp)
 
 ### Leaderboard Pop Up
 
+From the main page, if the Leaderboard button is selected, the player will be presented with the following pop up, which over time will show a high scores list of previously saved scores by the user. This will encourage players to save their scores to try and reach the top of the leaderboard.<br>
 ![leaderboard pop up](assets/images/Leaderboard.webp)
 
 ### Notifications
 
+At various stages within the site there will be notifications shown to the user as feedback to their actions. Firstly is the correct answer notification appearing on the main quiz page. Each time the player answers correctly a notification will appear to confirm this to them. Similarly if the player answers incorrectly, and notification will appear to advise them of this. After the quiz has been completed, should the user choose to save their score a notification will appear to confirm their score has been successfully saved.<br>
 Correct <br>
 ![correct notification](assets/images/correct-notification.webp)<br>
 Incorrect <br>
