@@ -230,6 +230,36 @@ If you would like to clone this repository:
 
 ## Testing
 
+Testing was completed on the following devices to confirm the responsiveness of the site:
+
+- Macbook Pro
+- Lenovo Desktop
+- Samsung S21 FE mobile
+- Ipad Pro
+
+The Niche Crystals site has been tested using the following browsers:
+
+- Google Chrome
+- Safari
+- Firefox
+
+|       Feature        |                                      Expected Outcome                                       |                     Testing Performed                      |                        Result                         | Pass/Fail |
+| :------------------: | :-----------------------------------------------------------------------------------------: | :--------------------------------------------------------: | :---------------------------------------------------: | :-------: |
+|  **Main Page**  |
+|                      |                                                                                             |                                                            |                                                       |           |
+| Lets Play Button |                    When clicked the user should be taken to the main quiz page                     |                       Clicked Lets Play Button                        |                Redirected to main quiz page                |   Pass    |
+|   How to Play Button   |              When clicked the how to play pop up should appear, replacing the main page              |                  Clicked How to Play                   |           How to play pop up appears, replacing main page          |   Pass    |
+|   Leaderboard Button    |                 When clicked the leaderboard pop up should appear, replacing the main page                  |                        Clicked Leaderboard Button                        |                Leaderboard pop up appears, replacing the main page               |   Pass    |
+|  Close Pop Ups Button   |                When clicked the pop up should close and the main page reappear               |                        Clicked the X icon                        |              Pop up closed and main page appears               |   Pass    |
+|  **Main Quiz**   |                                |                                                |                             |       |
+|          |    |     |    |       |
+|     Answer Buttons    |           When clicked a notification should appear confirming if answer is correct/incorrect and new content should load            |                       Clicked Answer Buttons                        |      Appropriate notification appears and new content is loaded     |   Pass    |
+|    Incrementing Score   |                    When correct answer is selected the user score should increase by 1                   |                    Selected correct answer                     |                      Score increased by 1                      |   Pass    |
+|   **End Page**   |
+|                      |                                                                                             |                                                            |                                                       |           |
+|     Save Score Button    | When clicked username and score should save to leaderboard, and user should be redirected to the main page | Clicked Save Score button | PENDING |   PENDING    |
+|     Try Again Button     |                      When clicked, quiz page should appear with new content, and user score should reset to 0                      |                    Clicked Try Again button                    |                  Quiz restarts with new content and score resets to 0                 |   Pass    |
+
 ### Validators
 
 #### HTML
