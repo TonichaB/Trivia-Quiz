@@ -24,6 +24,8 @@ Quiz Night is an online trivia quiz for users wanting to have fun with friends t
     - [Start Page](#start-page)
     - [Main Quiz Page](#main-quiz-page)
     - [End Page](#end-page)
+    - [How To Play Pop Up](#how-to-play-pop-up)
+    - [Leaderboard Pop Up](#leaderboard-pop-up)
     - [Notifications](#notifications)
     - [Future Development](#future-development)
     - [Accesibility](#accesibility)
@@ -124,16 +126,24 @@ Mobile <br>
 ### Main Quiz Page
 
 Desktop<br>
-![desktop quiz page preview]() <br>
+![desktop quiz page preview](assets/images/Desktop-Quiz-Page.webp) <br>
 Mobile<br>
-![mobile quiz page preview]()
+![mobile quiz page preview](assets/images/Mobile-Quiz-Page.webp)
 
 ### End Page
 
 Desktop <br>
 ![desktop end page preview](assets/images/Desktop-End-Page.webp) <br>
 Mobile <br>
-![mobile end page preview](assets/images/Mobile-End-Page.webp)
+![mobile end page preview](assets/images/Mobile-End-Screen.webp)
+
+### How To Play Pop Up
+
+![how to play pop up](assets/images/How-to-play.webp)
+
+### Leaderboard Pop Up
+
+![leaderboard pop up](assets/images/Leaderboard.webp)
 
 ### Notifications
 
@@ -160,7 +170,7 @@ To provide accessibility to the website the following has been incorporated;
 2. Semantic elements have been used for easy navigation through each page.
 3. The colour scheme selected is also made suitable for colour-blind users as shown in the design section above.
 4. I have also carried out accessibility checks using the WAVE Chrome Extension which has confirmed no accessibility errors. Please see the below results for the site;<br>
-![Wave validation image]()<br>
+![Wave validation image](assets/images/Wave-Validator.webp)<br>
 [Back to Contents](#contents)
 
 ---
@@ -247,8 +257,9 @@ During the process of building the quiz I came accross a couple of bugs to be fi
 
 1. The first bug I came across related to the functionality of the start page buttons. The play button to start the quiz was not functioning, and the instructions and how to play buttons would open the relevant divs but showing at the bottom of the page. I spoke with my Mentor, Luke, who pointed out the sections of my code causing the bug, making use of the Google Developer Tools. Using his guidance and further testing with Google Developer Tools, I sourced the issue to the javascript functions to hide the start page when each button is clicked.
 2. When working with the end page functionalities, I came accross the second bug. Despite entering in a username to save the score achieved, an additional alert was appearing asking again for the username to be given before saving. Following this the score would not be saved in the local storage for the device to be displayed on the leaderboard. <br>
-![second bug screenshot](assets/images/bug2-screenshot.webp)
-3.  <br>
+![second bug screenshot](assets/images/bug2-screenshot.webp) <br>
+I was able to resolve this issue by removing a prompt in my Javascript code so that only the input field would request a username be added.
+3. The last bug I faced appeared when attempting to save the end score using the save score button. Despite adding in a username the function to save the score was unsuccessful, preventing the remaining functions from running to take the user back to the start page.<br>
 [Back to Contents](#contents)
 
 ---
