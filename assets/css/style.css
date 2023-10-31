@@ -275,6 +275,7 @@
     margin: 0 auto;
     padding: 2rem;
     display: none;
+    align-items: center;
 }
 
 #quiz-complete h2 {
@@ -317,6 +318,7 @@
     font-size: 2rem;
     margin-top: 2rem;
     margin-bottom: 2rem;
+    margin-right: 22px;
 }
 
 /* Notifications */
@@ -353,6 +355,10 @@
     #leaderboard-pop-up h2 {
     font-size: 3.5rem;
     }
+    #quiz-complete input {
+        margin-right: 31px;
+        width: 70%;
+        }
 }
 
 /* Media Queries, tablets and larger*/
@@ -371,6 +377,9 @@
         width: 70%;
         left: 15%;
     }
+    #quiz-complete input {
+        width: 60%;
+        }
 }
 
 /*Media Queries, larger laptop screens */
