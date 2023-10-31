@@ -95,6 +95,8 @@ The site is kept simple to allow the players a straight forward experience witho
 
 ## Design
 
+Using Balsamiq during the planning stage of this build I was able to create wireframes for each page and mobile view to use as a guide when building the website.
+
 ### Wireframes
 
 Desktop<br>
@@ -115,6 +117,10 @@ Mobile<br>
 ---
 
 ## Features and Functionality
+
+### Search Engine Optimization 
+
+In order to improve the optimisation of the website's content relevance, and the quality and quantity of website traffic I have included meta tags within the head elements. These tags will create a small description for the website when coming up within the output of a search engine, alongside the addition of keywords to increase the ranking of the website on the search engine's output.
 
 ### Start Page
 
