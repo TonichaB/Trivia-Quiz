@@ -6,14 +6,12 @@ const instructionsButton = document.getElementById("instructions-pop-up");
 const leaderboardButton = document.getElementById("leaderboard-pop-up");
 const mainPage = document.getElementById("container");
 const quizPage = document.getElementById("container2");
-const startPage = document.getElementById("start-page");
 const question = document.getElementById("question");
 const highScoreList = document.getElementById("high-scores");
 const numOfHighScores = 10;
 const highScoreString = localStorage.getItem(highScoreList);
 const highScores = JSON.parse(highScoreString) || [];
 const userScore = document.getElementById('user-score-tally');
-const userName = document.getElementById("username");
 const notification = document.getElementById("notification");
 const quizComplete = document.getElementById("quiz-complete");
 const finalScore = document.getElementById("final-score");
@@ -25,7 +23,6 @@ let correctAnswer;
 let qnaObjectArray;
 let questionCounter = 0;
 let shuffleAnswers;
-let isScoreSaved = false;
 
 /* Wait for DOM to load before executing the first function 
 * to show the start page and add event listeners for the buttons
@@ -293,22 +290,26 @@ function resetScore() {
 */
 function checkHighScore(score) {
 
-    if (isScoreSaved) {
-        return; // Exit if the score is already saved
-    }
-
     const lowestScore = highScores[numOfHighScores - 1]?.score ?? 0;
 
     if (score > lowestScore) {
         saveHighScore(score, highScores);
-        displayLeaderboard();
     }
 }
 
 /* Function to save user name and score to leaderboard */
 function saveHighScore(score, highScores) {
+
     const name = document.getElementById('username').value;
     const newScore = { score, name };
+
+    const isScoreAlreadySaved= highScores.some(existingScore => existingScore.score === score);
+    
+    if (isScoreAlreadySaved) {
+        console.log("notification");
+        showNotification("Score Already Saved!", "error");
+        return;
+    }
 
     highScores.push(newScore);
 
@@ -317,8 +318,6 @@ function saveHighScore(score, highScores) {
     highScores.splice(numOfHighScores);
 
     localStorage.setItem("highScores", JSON.stringify(highScores));
-    displayLeaderboard();
 
     showNotification("Score Saved!", "success");
-    hideNotification();
 }

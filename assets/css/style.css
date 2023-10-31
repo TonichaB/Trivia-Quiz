@@ -323,11 +323,8 @@
 /* Notifications */
 
 #notification {
-    position:relative;
-}
-#notificationText {
+    position: fixed;
     opacity: 1;
-    transform: translate(-50%, -50%);
     background-color: rgb(222, 124, 142);
     border: 1px;
     border-radius: 4px;
@@ -335,11 +332,14 @@
     text-align: center;
     font-size: 6rem;
     width: 80%;
-    position: absolute;
-    margin-bottom: 10px;
     z-index: 9999;
-    top: 50%;
+    display: none;
+    top: 500px;
     left: 50%;
+    transform: translate(-50%, 35%);
+}
+#notification #notificationText {
+    color:white;
 }
 
 /* Footer */
@@ -360,11 +360,6 @@
 /* Media Queries, mobile devices*/
 @media screen and (max-width: 768px) {
 
-    #notificationText {
-        font-size: 3rem;
-        width: 80%;
-    }
-
     #instructions-pop-up ol li {
     font-size: 2rem;
     }
@@ -381,19 +376,11 @@
 /* Media Queries, tablets and larger*/
 @media screen and (min-width: 768px) {
 
-    #notificationText {
-        top: 50%;
-    }
 }
 
 /* Media Queries, latops and larger */
 @media screen and (min-width: 992px) {
 
-    #notificationText {
-        font-size: 4rem;
-        width: 70%;
-        left: 15%;
-    }
     #quiz-complete input {
         width: 60%;
         }
@@ -402,16 +389,9 @@
 /*Media Queries, larger laptop screens */
 @media screen and (min-width: 1200px) {
 
-    #notificationText {
-        top: 43%;
-    }
 }
 
 /* 4k screens */
 @media screen and (min-width: 2500px) {
-    #notificationText {
-        top: 24%;
-        width: 50%;
-        left: 25%;
-    }
+
 }
