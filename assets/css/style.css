@@ -321,20 +321,25 @@
 }
 
 /* Notifications */
+
+#notification {
+    position:relative;
+}
 #notificationText {
     opacity: 1;
+    transform: translate(-50%, -50%);
     background-color: rgb(222, 124, 142);
     border: 1px;
     border-radius: 4px;
     padding: 15px;
-    flex-direction: column;
     text-align: center;
     font-size: 6rem;
     width: 80%;
-    position: fixed;
+    position: absolute;
     margin-bottom: 10px;
     z-index: 9999;
     top: 50%;
+    left: 50%;
 }
 
 /* Footer */
@@ -357,9 +362,7 @@
 
     #notificationText {
         font-size: 3rem;
-        top: 33%;
-        width: 70%;
-        left: 15%;
+        width: 80%;
     }
 
     #instructions-pop-up ol li {

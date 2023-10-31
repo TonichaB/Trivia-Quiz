@@ -26,12 +26,14 @@ let correctAnswer;
 let qnaObjectArray;
 let questionCounter = 0;
 let shuffleAnswers;
+let isScoreSaved = false;
 
 /* Wait for DOM to load before executing the first function 
 * to show the start page and add event listeners for the buttons
 */
 
 document.addEventListener("DOMContentLoaded", function () {
+    mainPage.style.display = 'block';
     const startButtons = this.querySelectorAll(".btn");
     startButtons.forEach((startButton) => {
         startButton.addEventListener("click", function () {
@@ -104,12 +106,8 @@ function displayLeaderboard() {
 
 /* This function will take the user to the quiz to start */
 function runGame() {
-    quizComplete.style.display = 'none';
-    startPage.style.display = 'none';
-    if (quizPage.style.display == 'none') {
-        startPage.style.display = 'none';
-        quizPage.style.display = 'block';
-    }
+    mainPage.style.display = 'none';
+    quizPage.style.display = 'block';
     retrieveContent();
 }
 
@@ -181,9 +179,7 @@ function checkAnswer(buttonText) {
 
 /* Function to show notification for correct/incorrect answer */
 function showNotification(message, type) {
-    if (notification.style == 'none') {
-        notification.style.display = 'block';
-    }
+    notification.style.display = 'block';
     notification.animate(
         [
             { top: "-210px" },
@@ -198,10 +194,10 @@ function showNotification(message, type) {
     notification.innerHTML = `<p id="notificationText">${message}</p>`;
 
     if (type === "success") {
-        notification.style.backgroundColour = "green";
+        notification.style.backgroundColor = "green";
         notification.style.color = "white";
     } else if (type === "error") {
-        notification.style.backgroundColour = "red";
+        notification.style.backgroundColor = "red";
         notification.style.color = "white";
     }
     /* Timer for notifications to dissappear */
@@ -274,13 +270,14 @@ function endGame() {
         endGameButtons.addEventListener("click", function () {
             resetScore();
             if (this.getAttribute("id") === "try-again-btn") {
+                quizComplete.style.display = 'none';
+                mainPage.style.display = 'none';
                 runGame();
             } else if (this.getAttribute("id") === "end-score-btn") {
                 checkHighScore(finalScore.innerText);
-                showNotification("Score Saved!", "success");
                 if (quizComplete.style.display === 'block') {
                     quizComplete.style.display = 'none';
-                    startPage.style.display = 'block';
+                    mainPage.style.display = 'block';
                 }
             }
         });
@@ -296,6 +293,11 @@ function resetScore() {
 * I have used code from https://michael-karen.medium.com/how-to-save-high-scores-in-local-storage-7860baca9d68 to assist with this function
 */
 function checkHighScore(score) {
+
+    if (isScoreSaved) {
+        return; // Exit if the score is already saved
+    }
+
     const lowestScore = highScores[numOfHighScores - 1]?.score ?? 0;
 
     if (score > lowestScore) {
@@ -317,4 +319,8 @@ function saveHighScore(score, highScores) {
 
     localStorage.setItem("highScores", JSON.stringify(highScores));
     displayLeaderboard();
+
+    showNotification("Score Saved!", "success");
+    isScoreSaved = true;
+    hideNotification();
 }
