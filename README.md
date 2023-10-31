@@ -131,9 +131,9 @@ Mobile<br>
 ### End Page
 
 Desktop <br>
-![desktop end page preview](assets/images/Desktop-end-page.webp) <br>
+![desktop end page preview](assets/images/Desktop-End-Page.webp) <br>
 Mobile <br>
-![mobile end page preview](assets/images/Mobile-end-page.webp)
+![mobile end page preview](assets/images/Mobile-End-Page.webp)
 
 ### Notifications
 
@@ -222,11 +222,17 @@ If you would like to clone this repository:
 
 #### HTML
 
+![HTML validator Results-passed](assets/images/HMTL-Validator.webp)
+
 #### CSS
+
+![CSS Validator Results- Passed](assets/images/CSS-Validator.webp)
 
 #### JS Hint
 
 #### Lighthouse
+
+![Lighthouse Validator Results- Passed](assets/images/Lighthouse-Validator.webp)
 
 #### WebAim
 
