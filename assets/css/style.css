@@ -331,6 +331,20 @@
     top: 50%;
 }
 
+/* Footer */
+#footer {
+    font-size: 2rem;
+    color:white;
+    background-color: black;
+    text-align:center;
+}
+
+#footer a {
+    display:inline-block;
+    color: white;
+    font-size: 1rem;
+}
+
 /* Media Queries, mobile devices*/
 @media screen and (max-width: 768px) {
 
