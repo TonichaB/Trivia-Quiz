@@ -91,6 +91,7 @@ function closeLeaderboard() {
     }
 }
 
+/* Function to display the saved high scores */
 function displayLeaderboard() {
     highScore.innerHTML = savedScores
         .map((score) => {
@@ -110,6 +111,7 @@ function runGame() {
     retrieveContent();
 }
 
+/* Event listeners for the answer buttons */
 const buttonA = document.getElementById("answer-a-btn");
 buttonA.addEventListener("click", () => checkAnswer(buttonA.textContent));
 const buttonB = document.getElementById("answer-b-btn");
@@ -200,7 +202,7 @@ function showNotification(message, type) {
         notification.style.backgroundColour = "red";
         notification.style.color = "white";
     }
-
+    /* Timer for notifications to dissappear */
     setTimeout(() => {
         notification.animate(
             [
@@ -264,7 +266,7 @@ function endGame() {
     }
 
     finalScore.innerText = score;
-
+    /* End game button functions */
     const endGameButtons = document.querySelectorAll(".quiz-complete-btn");
     endGameButtons.forEach((endGameButtons) => {
         endGameButtons.addEventListener("click", function () {
