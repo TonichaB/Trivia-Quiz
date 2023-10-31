@@ -4,7 +4,7 @@ Visit the live website [here!](https://tonichab.github.io/Trivia-Quiz/)
 
 Quiz Night is an online trivia quiz for users wanting to have fun with friends testing their general knowledge. The objective is to try and answer multiple choice questions correctly
 
-![responsive website example image] ()
+![responsive website example image](assets/images/Am-I-Responsive.webp)
 
 ---
 
