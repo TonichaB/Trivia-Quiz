@@ -8,10 +8,10 @@ const mainPage = document.getElementById("container");
 const quizPage = document.getElementById("container2");
 const startPage = document.getElementById("start-page");
 const question = document.getElementById("question");
-const highScore = document.getElementById("high-scores");
+const highScoreList = document.getElementById("high-scores");
 const savedScores = JSON.parse(localStorage.getItem("savedScores")) || [];
 const numOfHighScores = 10;
-const highScoreString = localStorage.getItem(highScore);
+const highScoreString = localStorage.getItem(highScoreList);
 const highScores = JSON.parse(highScoreString) || [];
 const userScore = document.getElementById('user-score-tally');
 const userName = document.getElementById("username");
@@ -53,9 +53,10 @@ document.addEventListener("DOMContentLoaded", function () {
 * The function also listens out for the close button
 */
 function instructionsPopUp() {
-    if (instructionsButton.style = 'none') {
+    if (instructionsButton.style === 'none' || instructionsButton.style.display === '') {
         instructionsButton.style.display = 'block';
         mainPage.style.display = 'none';
+        quizPage.style.display = 'none';
     }
 
     const closeInstructionsPopUp = document.getElementById("close-instructions");
@@ -64,9 +65,10 @@ function instructionsPopUp() {
 
 /* This function will close the how to play pop up when the close button is clicked */
 function closeInstructions() {
-    if (instructionsButton.style.display = 'block') {
+    if (instructionsButton.style.display == 'block') {
         instructionsButton.style.display = 'none';
         mainPage.style.display = 'block';
+        quizPage.style.display = 'none';
     }
 }
 
@@ -74,7 +76,7 @@ function closeInstructions() {
 * The function also listens out for the close button
 */
 function leaderboardPopUp() {
-    if (leaderboardButton.style.display = 'none') {
+    if (leaderboardButton.style.display === 'none' || leaderboardButton.style.display === '') {
         leaderboardButton.style.display = 'block';
         mainPage.style.display = 'none';
     }
@@ -85,7 +87,7 @@ function leaderboardPopUp() {
 
 /* This function will close the leaderboard pop up when the close button is clicked */
 function closeLeaderboard() {
-    if (leaderboardButton.style.display = 'block') {
+    if (leaderboardButton.style.display == 'block') {
         leaderboardButton.style.display = 'none';
         mainPage.style.display = 'block';
     }
@@ -93,11 +95,11 @@ function closeLeaderboard() {
 
 /* Function to display the saved high scores */
 function displayLeaderboard() {
-    highScore.innerHTML = savedScores
+    highScoreList.innerHTML = highScores
         .map((score) => {
-            return `<li class= "high-scores">${score.name} - ${score.score}`;
+            return `<li class="high-scores">${score.name} - ${score.score}</li>`;
         })
-        .join();
+        .join('');
 }
 
 /* This function will take the user to the quiz to start */
@@ -179,7 +181,7 @@ function checkAnswer(buttonText) {
 
 /* Function to show notification for correct/incorrect answer */
 function showNotification(message, type) {
-    if (notification.style = 'none') {
+    if (notification.style == 'none') {
         notification.style.display = 'block';
     }
     notification.animate(
@@ -219,7 +221,7 @@ function showNotification(message, type) {
 }
 
 function hideNotification() {
-    if (notification.style = 'block') {
+    if (notification.style == 'block') {
         notification.style.display = 'none';
     }
 }
@@ -258,9 +260,9 @@ function shuffleArray(array) {
 function endGame() {
 
     quizComplete.style.display = 'none';
-    quizPage.style.display == 'none';
+    quizPage.style.display = 'none';
 
-    if (quizPage.style.display === 'block') {
+    if (quizComplete.style.display == 'none') {
         quizPage.style.display = 'none';
         quizComplete.style.display = 'block';
     }
