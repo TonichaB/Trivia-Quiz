@@ -9,7 +9,6 @@ const quizPage = document.getElementById("container2");
 const startPage = document.getElementById("start-page");
 const question = document.getElementById("question");
 const highScoreList = document.getElementById("high-scores");
-const savedScores = JSON.parse(localStorage.getItem("savedScores")) || [];
 const numOfHighScores = 10;
 const highScoreString = localStorage.getItem(highScoreList);
 const highScores = JSON.parse(highScoreString) || [];
@@ -46,6 +45,24 @@ document.addEventListener("DOMContentLoaded", function () {
             } else if (this.getAttribute("id") === "leaderboard-btn") {
                 leaderboardPopUp();
                 console.log("leaderboard");
+            }
+        });
+    });
+    /* End game button functions */
+    const endGameButtons = document.querySelectorAll(".quiz-complete-btn");
+    endGameButtons.forEach((endGameButtons) => {
+        endGameButtons.addEventListener("click", function () {
+            resetScore();
+            if (this.getAttribute("id") === "try-again-btn") {
+                quizComplete.style.display = 'none';
+                mainPage.style.display = 'none';
+                runGame();
+            } else if (this.getAttribute("id") === "end-score-btn") {
+                checkHighScore(finalScore.innerText);
+                if (quizComplete.style.display === 'block') {
+                    quizComplete.style.display = 'none';
+                    mainPage.style.display = 'block';
+                }
             }
         });
     });
@@ -264,24 +281,6 @@ function endGame() {
     }
 
     finalScore.innerText = score;
-    /* End game button functions */
-    const endGameButtons = document.querySelectorAll(".quiz-complete-btn");
-    endGameButtons.forEach((endGameButtons) => {
-        endGameButtons.addEventListener("click", function () {
-            resetScore();
-            if (this.getAttribute("id") === "try-again-btn") {
-                quizComplete.style.display = 'none';
-                mainPage.style.display = 'none';
-                runGame();
-            } else if (this.getAttribute("id") === "end-score-btn") {
-                checkHighScore(finalScore.innerText);
-                if (quizComplete.style.display === 'block') {
-                    quizComplete.style.display = 'none';
-                    mainPage.style.display = 'block';
-                }
-            }
-        });
-    });
 }
 
 /* Function to re-set score when new game is started */
@@ -321,6 +320,5 @@ function saveHighScore(score, highScores) {
     displayLeaderboard();
 
     showNotification("Score Saved!", "success");
-    isScoreSaved = true;
     hideNotification();
 }
