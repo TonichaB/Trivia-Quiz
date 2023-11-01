@@ -434,7 +434,33 @@
 
 /* Media Queries, tablets and larger*/
 @media screen and (min-width: 768px) {
+#noScriptMessage h2 {
+        font-size: 4rem;
+    }
 
+    #noScriptMessage p {
+        font-size: 2rem;
+    }
+
+    #noScriptMessage ul {
+        font-size: 2rem;
+    }
+
+    #noScriptMessage li {
+        font-size: 2rem;
+    }
+
+    #noScriptMessage li em {
+        font-size: 2rem;
+    }
+
+    #noScriptMessage ol {
+        font-size: 2rem;
+    }
+
+    #noScriptMessage ol li {
+        font-size: 2rem;
+    }
 }
 
 /* Media Queries, latops and larger */
@@ -442,15 +468,94 @@
 
     #quiz-complete input {
         width: 60%;
-        }
+    }
+    #noScriptMessage h2 {
+        font-size: 5rem;
+    }
+        
+    #noScriptMessage p {
+        font-size: 3rem;
+    }
+        
+    #noScriptMessage ul {
+        font-size: 3rem;
+    }
+        
+    #noScriptMessage li {
+        font-size: 3rem;
+    }
+        
+    #noScriptMessage li em {
+        font-size: 3rem;
+    }
+        
+    #noScriptMessage ol {
+        font-size: 3rem;
+    }
+        
+    #noScriptMessage ol li {
+        font-size: 3rem;
+    }
 }
 
 /*Media Queries, larger laptop screens */
 @media screen and (min-width: 1200px) {
+#noScriptMessage h2 {
+        font-size: 6rem;
+    }
 
+    #noScriptMessage p {
+        font-size: 4rem;
+    }
+
+    #noScriptMessage ul {
+        font-size: 4rem;
+    }
+
+    #noScriptMessage li {
+        font-size: 4rem;
+    }
+
+    #noScriptMessage li em {
+        font-size: 4rem;
+    }
+
+    #noScriptMessage ol {
+        font-size: 4rem;
+    }
+
+    #noScriptMessage ol li {
+        font-size: 4rem;
+    }
 }
 
 /* 4k screens */
 @media screen and (min-width: 2500px) {
+#noScriptMessage h2 {
+        font-size: 7rem;
+    }
 
+    #noScriptMessage p {
+        font-size: 5rem;
+    }
+
+    #noScriptMessage ul {
+        font-size: 5rem;
+    }
+
+    #noScriptMessage li {
+        font-size: 5rem;
+    }
+
+    #noScriptMessage li em {
+        font-size: 5rem;
+    }
+
+    #noScriptMessage ol {
+        font-size: 5rem;
+    }
+
+    #noScriptMessage ol li {
+        font-size: 5rem;
+    }
 }
