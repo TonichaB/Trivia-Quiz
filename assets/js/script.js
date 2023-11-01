@@ -56,10 +56,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 runGame();
             } else if (this.getAttribute("id") === "end-score-btn") {
                 checkHighScore(finalScore.innerText);
-                if (quizComplete.style.display === 'block') {
-                    quizComplete.style.display = 'none';
-                    mainPage.style.display = 'block';
-                }
             }
         });
     });
@@ -291,24 +287,30 @@ function resetScore() {
 * I have used code from https://michael-karen.medium.com/how-to-save-high-scores-in-local-storage-7860baca9d68 to assist with this function
 */
 function checkHighScore(score) {
+    const nameInput = document.getElementById('username');
+    const name= nameInput.value.trim();
+
+    if (name === '') {
+        showNotification("Please Enter a Username!", "error");
+        return;
+    }
 
     const lowestScore = highScores[numOfHighScores - 1]?.score ?? 0;
 
     if (score > lowestScore) {
-        saveHighScore(score, highScores);
+        saveHighScore(score, name, highScores);
+        return;
     }
 }
 
 /* Function to save user name and score to leaderboard */
-function saveHighScore(score, highScores) {
+function saveHighScore(score, name, highScores) {
 
-    const name = document.getElementById('username').value;
     const newScore = { score, name };
 
     const isScoreAlreadySaved= highScores.some(existingScore => existingScore.score === score);
     
     if (isScoreAlreadySaved) {
-        console.log("notification");
         showNotification("Score Already Saved!", "error");
         return;
     }
@@ -322,4 +324,6 @@ function saveHighScore(score, highScores) {
     localStorage.setItem("highScores", JSON.stringify(highScores));
 
     showNotification("Score Saved!", "success");
+    mainPage.style.display = 'block';
+    quizComplete.style.display = 'none';
 }
