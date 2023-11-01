@@ -155,6 +155,9 @@ function retrieveContent() {
         .then((data) => {
             qnaObjectArray = data;
             nextQuestion();
+        })
+        .catch (error => {
+            question.textContent = `Error fetching question: ${error}`;
         });
 }
 
