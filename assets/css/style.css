@@ -430,6 +430,9 @@
         margin-right: 31px;
         width: 70%;
         }
+    .custom-size {
+        font-size: 1em;
+    }
 }
 
 /* Media Queries, tablets and larger*/
@@ -461,6 +464,9 @@
     #noScriptMessage ol li {
         font-size: 2rem;
     }
+    .custom-size {
+        font-size: 1em;
+        }
 }
 
 /* Media Queries, latops and larger */
@@ -496,6 +502,9 @@
     #noScriptMessage ol li {
         font-size: 3rem;
     }
+    .custom-size {
+        font-size: 2em;
+    }
 }
 
 /*Media Queries, larger laptop screens */
@@ -527,6 +536,10 @@
     #noScriptMessage ol li {
         font-size: 4rem;
     }
+    
+    .custom-size{
+        font-size: 2em;
+    }
 }
 
 /* 4k screens */
@@ -557,5 +570,15 @@
 
     #noScriptMessage ol li {
         font-size: 5rem;
+    }
+    
+    .leaderboard ul {
+        font-size: 6rem;
+    }
+    .custom-size {
+        font-size: 2em;
+    }
+    .btn {
+        font-size: 3rem;
     }
 }
