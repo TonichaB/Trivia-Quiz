@@ -185,7 +185,6 @@ function checkAnswer(buttonText) {
     const answer = buttonText.substring(3);
     if (answer === correctAnswer) {
         showNotification("That's Right!", "success");
-        // alert("Thats Right!");
         if (questionCounter <= 9) {
             nextQuestion();
         } else {
@@ -195,7 +194,6 @@ function checkAnswer(buttonText) {
         incrementScore();
     } else {
         showNotification("Mmmm...Not Quite!", "error");
-        // alert("That's not right!");
         if (questionCounter <= 9) {
             nextQuestion();
         } else {
