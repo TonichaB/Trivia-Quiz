@@ -361,7 +361,8 @@ To assist with the building of this quiz I have made use of the following;
   - [Brian Design](https://www.youtube.com/watch?v=f4fB9Xg2JEY)
   - [Codehal](https://www.youtube.com/watch?v=Vp8x8-reqZA)
 - The following websites have also been used for guidance with the code used:
-  - [Michael Karen](https://michael-karen.medium.com/how-to-save-high-scores-in-local-storage-7860baca9d68) This page was used to assist with saving high scores for the leaderboard feature.
+  - [Michael Karen](https://michael-karen.medium.com/how-to-save-high-scores-in-local-storage-7860baca9d68)- This page was used to assist with saving high scores for the leaderboard feature.
+  - [Tiny Cloud](https://www.tiny.cloud/blog/javascript-localstorage)- This page I found useful to help develop my understanding of local storage.
 - I have utilised [Trivia API](https://the-trivia-api.com) to generate the questions and answers for the quiz.
 
 ### Content
@@ -370,11 +371,13 @@ The icons used on the home page of the quiz have been sourced from [Font Awesome
 
 ### Media
 
+The Quiz Night logo was sourced from [Pixabay](https://pixabay.com/vectors/quiz-night-quiz-night-lights-text-2191229/), a site containing royalty free stock photos.
+
 ### Acknowledgements
 
 I would like to acknowledge Code Institute and their Full Stack Development course which has assisted me in building the site.
 
 I would also like to thank my fellow students and members of the Stack community whose contributions within the Slack channels have proven to be very helpful when facing challenges during the project.
 
-Lastly I would like to thank my Mentor Luke who helped me overcome my biggest bug hurdle when completing the project.<br>
+Lastly I would like to thank my Mentor Luke who helped me overcome my biggest bug hurdles when completing the project.<br>
 [Back to Contents](#contents)
