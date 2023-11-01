@@ -29,6 +29,19 @@ let shuffleAnswers;
 */
 
 document.addEventListener("DOMContentLoaded", function () {
+    
+    const noScriptMessage = document.getElementById("noScriptMessage");
+    const contentWrapper = document.getElementById("content-wrapper");
+
+    if (noScriptMessage && contentWrapper) {
+        if (typeof noScriptMessage.style.display !== "undefined") {
+            contentWrapper.style.display = "block";
+            noScriptMessage.style.display = "none";
+        }
+        mainPage.style.display = 'none';
+        quizComplete.style.display = 'none';
+    }
+    
     mainPage.style.display = 'block';
     const startButtons = this.querySelectorAll(".btn");
     startButtons.forEach((startButton) => {
