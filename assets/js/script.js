@@ -111,11 +111,12 @@ function closeLeaderboard() {
 
 /* Function to display the saved high scores */
 function displayLeaderboard() {
+    const highScoreList = document.getElementById('high-scores');
     highScoreList.innerHTML = highScores
-        .map((score) => {
-            return `<li class="high-scores">${score.name} - ${score.score}</li>`;
+        .map((score, index) => {
+            return `<li class="high-scores">${index + 1}. ${score.name} - ${score.score}</li>`;
         })
-        .join('');
+        .join('');    
 }
 
 /* This function will take the user to the quiz to start */
