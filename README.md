@@ -190,7 +190,7 @@ Username Required <br>
 
 I have included a footer to the site noting the purpose of this project to complete my course with Code Institute. There is an external link to my GitHub profile so users can view other projects if they have enjoyed the quiz.<br>
 
-![footer]()
+![footer](assets/images/footer.webp)
 
 ### Future Development
 
