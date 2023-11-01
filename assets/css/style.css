@@ -351,11 +351,15 @@
 
 /* Footer */
 #footer {
+    position:fixed;
+    bottom: 0;
+    width: 100%;
     font-size: 2rem;
     color:white;
     background-color: black;
     text-align:center;
     align-items: flex-end;
+    padding-bottom: 15px;
 }
 
 #footer a {
