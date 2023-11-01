@@ -114,7 +114,8 @@ function displayLeaderboard() {
     const highScoreList = document.getElementById('high-scores');
     highScoreList.innerHTML = highScores
         .map((score, index) => {
-            return `<li class="high-scores">${index + 1}. ${score.name} - ${score.score}</li>`;
+            const position = index + 1;
+            return `<li class="high-scores">${position}. ${score.name} - Score: ${score.score}</li>`;
         })
         .join('');    
 }
