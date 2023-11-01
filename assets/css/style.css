@@ -153,6 +153,8 @@
     margin-top: 10rem;
     margin-left: 10%;
     max-width: 80%;
+    min-height: 400px;
+    overflow-y: auto;
 }
 
 #leaderboard-pop-up h2 {
@@ -161,13 +163,18 @@
     text-align: center;
 }
 
-.leaderboard p {
+.leaderboard ul {
     display: flex;
     color: white;
-    font-size: 2rem;
+    font-size: 4rem;
     text-align: center;
-    margin-top: 10rem;
+    flex-direction: column;
+    margin-top: 0;
+    padding-top: 5px;
+    padding-bottom: 10px;
     background-color: transparent;
+    list-style-type: none;
+    min-height: 300px;
 }
 
 .leaderboard-image {
