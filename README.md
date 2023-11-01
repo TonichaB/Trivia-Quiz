@@ -324,9 +324,17 @@ The Niche Crystals site has been tested using the following browsers:
 
 WebAim is a useful tool to check the contrast of text vs background colour; I have used this to compare the colours of the buttons and notifications within the site to ensure they provide an acceptable contrast ratio. <br>
 
+D6CCC2:<br>
+This is the colour used for the Lets Play, Leaderboard and Save Score Buttons.<br>
 ![contrast checker D6CCC2](assets/images/contrast-checker-%23d6ccc2.webp)<br>
+DE7C8E: <br>
+This is the colour used for the How to Play, Try Again, and Answer buttons, as well as the background colour for the pop ups.<br>
 ![contrast checker DE7C8E](assets/images/contrast-checker-%23de7c8e.webp)<br>
+B20101: <br>
+This is the colour used for any error type notifications. <br>
 ![contrast checker B20101](assets/images/%23b20101-contrast-checker.webp)<br>
+00610B: <br>
+This is the colour used for any success type notifications. <br>
 ![contrast checker 00610B](assets/images/%2300610b-contrast-checker.webp)
 
 ### Bug Fixes
