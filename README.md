@@ -95,9 +95,9 @@ The site is kept simple to allow the players a straight forward experience witho
 
 ## Design
 
-Using Balsamiq during the planning stage of this build I was able to create wireframes for each page and mobile view to use as a guide when building the website.
-
 ### Wireframes
+
+Using Balsamiq during the planning stage of this build I was able to create wireframes for each page and mobile view to use as a guide when building the website.<br>
 
 Desktop<br>
 ![desktop wireframe](assets/images/desktop-wireframe.webp)<br>
@@ -107,6 +107,7 @@ Mobile<br>
 
 ### Colour Palette
 
+I have taken inspiration from the quiz logo image to source the colour palette for this site. The below shows the colour scheme selected, whilst also confirming the accessibility of the colours
 ![colour blind palette](assets/images/color.adobe.com_create_color-accessibility.webp)
 
 ### Typography
