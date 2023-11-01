@@ -78,7 +78,7 @@ The quiz interface includes an interactive score tracker that shows the users ho
 3. As a player, I want to be notified if my answer is correct or incorrect. <br>
 As each answer is selected a clear notification will appear on all devices to confirm whether or not the users answer is correct, whilst the next question is able to load in the background. <br>
 
-4. As a player, I want the ability to save my score to compare with other users.<br> 
+4. As a player, I want the ability to save my score to compare with other users.<br>
 Once a player has completed the quiz they will be prompted to add a username in order to save their score to view on the leaderboard. <br>
 
 5. As a player, I want to easily start the quiz again without needing to go back to the start page. <br>
@@ -107,10 +107,12 @@ Mobile<br>
 
 ### Colour Palette
 
-I have taken inspiration from the quiz logo image to source the colour palette for this site. The below shows the colour scheme selected, whilst also confirming the accessibility of the colours
+Inspiration was taken from the quiz logo image to source the colour palette for this site, which has allowed for consistency throughout the site. The below shows the colour scheme selected, whilst also confirming the accessibility of the colours for colour blind users. Text throughout the site is either black or white to allow for the best contrast against any background.<br>
 ![colour blind palette](assets/images/color.adobe.com_create_color-accessibility.webp)
 
 ### Typography
+
+The site contains one main font, Mooli, for all text throughout. I have chosen to keep to this font throughout as it has created consistency and is clear and easy for users to read.<br>
 
 ![font image](assets/images/mooli-font.webp)<br>
 [Back to Contents](#contents)
@@ -119,7 +121,20 @@ I have taken inspiration from the quiz logo image to source the colour palette f
 
 ## Features and Functionality
 
-### Search Engine Optimization 
+### External Trivia API
+
+A main feature of this site is the use of an external [Trivia API](https://the-trivia-api.com/) which is regularly updated with an extensive database of trivia quiz questions and answers. The benefits of this mean a user is less likely to be faced with the same questions more than once, creating a new experience for both new and returning players.<br>
+
+The data has been obtained from a range of sources:
+
+- User submissions
+- SPARQL queries to Wikidata used to procedurally generate questions.
+- Large Language Models backed by ground truth
+- Scripts to scrape and build questions from information on public websites.<br>
+
+All questions are reviewed before being made available through the API to ensure they are suitable.
+
+### Search Engine Optimization
 
 In order to improve the optimisation of the website's content relevance, and the quality and quantity of website traffic I have included meta tags within the head elements. These tags will create a small description for the website when coming up within the output of a search engine, alongside the addition of keywords to increase the ranking of the website on the search engine's output.
 
@@ -155,21 +170,31 @@ From the main page, if the How to Play button is selected the player will be pre
 ### Leaderboard Pop Up
 
 From the main page, if the Leaderboard button is selected, the player will be presented with the following pop up, which over time will show a high scores list of previously saved scores by the user. This will encourage players to save their scores to try and reach the top of the leaderboard.<br>
-![leaderboard pop up](assets/images/leaderboard.webp)
+![leaderboard pop up](assets/images/leaderboard-pop-up.webp)
 
 ### Notifications
 
-At various stages within the site there will be notifications shown to the user as feedback to their actions. Firstly is the correct answer notification appearing on the main quiz page. Each time the player answers correctly a notification will appear to confirm this to them. Similarly if the player answers incorrectly, and notification will appear to advise them of this. After the quiz has been completed, should the user choose to save their score a notification will appear to confirm their score has been successfully saved.<br>
+At various stages within the site there will be notifications shown to the user as feedback to their actions. Firstly is the correct answer notification appearing on the main quiz page. Each time the player answers correctly a notification will appear to confirm this to them. Similarly if the player answers incorrectly, and notification will appear to advise them of this. After the quiz has been completed, should the user choose to save their score a notification will appear to confirm their score has been successfully saved. If the score has been saved under the same username previously, or no username is provided, an error notification will appear to advise the player.<br>
 Correct <br>
 ![correct notification](assets/images/correct-notification.webp)<br>
 Incorrect <br>
 ![incorrect notification](assets/images/incorrect-notification.webp)<br>
 Score Saved <br>
-![score saved notification]()<br>
+![score saved notification](assets/images/score-saved-notification.webp)<br>
+Score Already Saved <br>
+![score already saved notification](assets/images/save-score-error-notification.webp) <br>
+Username Required <br>
+![username required notification](assets/images/username-notification.webp)
+
+### Footer
+
+I have included a footer to the site noting the purpose of this project to complete my course with Code Institute. There is an external link to my GitHub profile so users can view other projects if they have enjoyed the quiz.<br>
+
+![footer]()
 
 ### Future Development
 
-In future developments of this project I would like to build a backround database for the storage of user scores, so that the leaderboard function would also users from around the globe to compare their scores. Currently this will be limited to only show previous scores from the same device using local storage.<br> 
+In future developments of this project I would like to build a backround database for the storage of user scores, so that the leaderboard function would also users from around the globe to compare their scores. Currently this will be limited to only show previous scores from the same device using local storage.<br>
 
 An additional feature I would include would be difficulty levels for the quiz. This would allow users control over the difficulty of the questions best suited for them, whilst also allowing for an additional sense of achievement for those able to work through the different difficulty levels.<br>
 
@@ -183,6 +208,7 @@ To provide accessibility to the website the following has been incorporated;
 2. Semantic elements have been used for easy navigation through each page.
 3. The colour scheme selected is also made suitable for colour-blind users as shown in the design section above.
 4. I have also carried out accessibility checks using the WAVE Chrome Extension which has confirmed no accessibility errors. Please see the below results for the site;<br>
+
 ![Wave validation image](assets/images/wave-validator.webp)<br>
 [Back to Contents](#contents)
 
@@ -204,6 +230,7 @@ The following technologies have been utilised in the production of this website;
 - Pixelied.com Website- I have used this website to convert my images from JPEG/PNG to WEBP.
 - Python- Via the terminal in Codeanywhere I have used python3 in order to preview the website using a local HTTP server.
 - AmIResponsive Website- To view overall functionality across devices I have used the AmIResponsive website.
+- Trivia API- To source the questions and answers content for the quiz.
 
 ### Languages Used
 
@@ -270,7 +297,9 @@ The Niche Crystals site has been tested using the following browsers:
 |    Incrementing Score   |                    When correct answer is selected the user score should increase by 1                   |                    Selected correct answer                     |                      Score increased by 1                      |   Pass    |
 |   **End Page**   |
 |                      |                                                                                             |                                                            |                                                       |           |
-|     Save Score Button    | When clicked username and score should save to leaderboard, and user should be redirected to the main page | Clicked Save Score button | PENDING |   PENDING    |
+|     Save Score Button- Username Given    | When clicked username and score should save to leaderboard, and user should be redirected to the main page | Clicked Save Score button | Score saved notification appears and user is redirected back to main page |   Pass    |
+|     Save Score Button- Username Not Given    | When clicked notification will apear to prompt user to input their username in order to save | Clicked Save Score button without username input. | Notification appears asking for a username |   Pass    |
+|     Score Saves to Local Storage    | When save button is clicked, using chrome developer tools the application tab should show the newly saved data to the local storage | Clicked Save Score button | Score and username appears as saved data via chrome developer tools |   Pass    |
 |     Try Again Button     |                      When clicked, quiz page should appear with new content, and user score should reset to 0                      |                    Clicked Try Again button                    |                  Quiz restarts with new content and score resets to 0                 |   Pass    |
 
 ### Validators
@@ -285,14 +314,20 @@ The Niche Crystals site has been tested using the following browsers:
 
 #### JS Hint
 
+![JS Hint Validator Results- Passed](assets/images/jshint-validator.webp)
+
 #### Lighthouse
 
 ![Lighthouse Validator Results- Passed](assets/images/lighthouse-validator.webp)
 
 #### WebAim
 
+WebAim is a useful tool to check the contrast of text vs background colour; I have used this to compare the colours of the buttons and notifications within the site to ensure they provide an acceptable contrast ratio. <br>
+
 ![contrast checker D6CCC2](assets/images/contrast-checker-%23d6ccc2.webp)<br>
-![contrast checker DE7C8E](assets/images/contrast-checker-%23de7c8e.webp)
+![contrast checker DE7C8E](assets/images/contrast-checker-%23de7c8e.webp)<br>
+![contrast checker B20101](assets/images/%23b20101-contrast-checker.webp)<br>
+![contrast checker 00610B](assets/images/%2300610b-contrast-checker.webp)
 
 ### Bug Fixes
 
@@ -302,7 +337,8 @@ During the process of building the quiz I came accross a couple of bugs to be fi
 2. When working with the end page functionalities, I came accross the second bug. Despite entering in a username to save the score achieved, an additional alert was appearing asking again for the username to be given before saving. Following this the score would not be saved in the local storage for the device to be displayed on the leaderboard. <br>
 ![second bug screenshot](assets/images/bug2-screenshot.webp) <br>
 I was able to resolve this issue by removing a prompt in my Javascript code so that only the input field would request a username be added.
-3. The last bug I faced appeared when attempting to save the end score using the save score button. Despite adding in a username the function to save the score was unsuccessful, preventing the remaining functions from running to take the user back to the start page.<br>
+3. An additional bug I faced appeared when attempting to save the end score using the save score button. Despite adding in a username the function to save the score was unsuccessful, preventing the remaining functions from running to take the user back to the start page. I was able to work through this issue again with my Mentor Luke and we were able to make some amendments to the JavaScript functions allowing the save button to become functional again.<br>
+4. The last bug I came accross occured once the save button became functionable. When a user saved their score, and chose to run the quiz again, the score would save in mulitples increasing each session. Working with the aid of Chrome Developer tools I was able to source the error so that each score is only saved once to the local storage.<br>
 [Back to Contents](#contents)
 
 ---

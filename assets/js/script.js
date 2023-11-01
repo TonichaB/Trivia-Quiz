@@ -222,10 +222,10 @@ function showNotification(message, type) {
     notification.innerHTML = `<p id="notificationText">${message}</p>`;
 
     if (type === "success") {
-        notification.style.backgroundColor = "green";
+        notification.style.backgroundColor = "#00610B";
         notification.style.color = "white";
     } else if (type === "error") {
-        notification.style.backgroundColor = "red";
+        notification.style.backgroundColor = "#B20101";
         notification.style.color = "white";
     }
     /* Timer for notifications to dissappear */
